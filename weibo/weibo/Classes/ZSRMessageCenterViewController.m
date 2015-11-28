@@ -59,10 +59,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ZSRTest1ViewController *test1 = [[ZSRTest1ViewController alloc] init];
-    test1.title = @"Test2导航控制器";
+    test1.title = @"Test1控制器";
     // 当test1控制器被push的时候，test1所在的tabbarcontroller的tabbar会自动隐藏
     // 当test1控制器被pop的时候，test1所在的tabbarcontroller的tabbar会自动显示
-    test1.hidesBottomBarWhenPushed = YES;
+//    test1.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:test1 animated:YES];
     
 }
