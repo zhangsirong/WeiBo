@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E64AC44B1C0976A2007C6713 /* ZSRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC44A1C0976A2007C6713 /* ZSRTabBarViewController.m */; };
-		E64AC44F1C097D5E007C6713 /* ZSRTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC44D1C097D5E007C6713 /* ZSRTest1ViewController.m */; };
-		E64AC4541C097D8C007C6713 /* ZSRTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4521C097D8C007C6713 /* ZSRTest2ViewController.m */; };
-		E64AC4551C097D8C007C6713 /* ZSRTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4531C097D8C007C6713 /* ZSRTest2ViewController.xib */; };
-		E64AC4581C0981E1007C6713 /* ZSRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4571C0981E1007C6713 /* ZSRNavigationController.m */; };
-		E64AC45E1C09849E007C6713 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC45D1C09849E007C6713 /* UIView+Extension.m */; };
-		E64AC46A1C098F4A007C6713 /* ZSRTest1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4691C098F4A007C6713 /* ZSRTest1ViewController.xib */; };
-		E64AC4731C0990C3007C6713 /* ZSRTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4711C0990C3007C6713 /* ZSRTest3ViewController.m */; };
-		E64AC4741C0990C3007C6713 /* ZSRTest3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4721C0990C3007C6713 /* ZSRTest3ViewController.xib */; };
-		E66724F21C0890B90070FCAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E66724F01C0890B90070FCAD /* AppDelegate.m */; };
-		E66724F31C0890B90070FCAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E66724F11C0890B90070FCAD /* main.m */; };
-		E691DE0B1C08AF2800A2F135 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691DE0A1C08AF2800A2F135 /* ZSRHomeViewController.m */; };
-		E691DE0E1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691DE0D1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m */; };
-		E691DE111C08AF8900A2F135 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691DE101C08AF8900A2F135 /* ZSRDiscoverViewController.m */; };
-		E691DE141C08AFA700A2F135 /* ZSRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691DE131C08AFA700A2F135 /* ZSRProfileViewController.m */; };
+		E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */; };
+		E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */; };
+		E64AC4AD1C0996F8007C6713 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4851C0996F8007C6713 /* UIView+Extension.m */; };
+		E64AC4AE1C0996F8007C6713 /* ZSRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4881C0996F8007C6713 /* ZSRNavigationController.m */; };
+		E64AC4AF1C0996F8007C6713 /* ZSRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC48A1C0996F8007C6713 /* ZSRTabBarViewController.m */; };
+		E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC48F1C0996F8007C6713 /* AppDelegate.m */; };
+		E64AC4B11C0996F8007C6713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4901C0996F8007C6713 /* main.m */; };
+		E64AC4B21C0996F8007C6713 /* ZSRMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4951C0996F8007C6713 /* ZSRMessageCenterViewController.m */; };
+		E64AC4B31C0996F8007C6713 /* ZSRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC49B1C0996F8007C6713 /* ZSRProfileViewController.m */; };
+		E64AC4B41C0996F8007C6713 /* ZSRTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4A31C0996F8007C6713 /* ZSRTest1ViewController.m */; };
+		E64AC4B51C0996F8007C6713 /* ZSRTest1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4A41C0996F8007C6713 /* ZSRTest1ViewController.xib */; };
+		E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4A61C0996F8007C6713 /* ZSRTest2ViewController.m */; };
+		E64AC4B71C0996F8007C6713 /* ZSRTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4A71C0996F8007C6713 /* ZSRTest2ViewController.xib */; };
+		E64AC4B81C0996F8007C6713 /* ZSRTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4A91C0996F8007C6713 /* ZSRTest3ViewController.m */; };
+		E64AC4B91C0996F8007C6713 /* ZSRTest3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -46,33 +46,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E64AC4491C0976A2007C6713 /* ZSRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTabBarViewController.h; sourceTree = "<group>"; };
-		E64AC44A1C0976A2007C6713 /* ZSRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTabBarViewController.m; sourceTree = "<group>"; };
-		E64AC44C1C097D5E007C6713 /* ZSRTest1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest1ViewController.h; sourceTree = "<group>"; };
-		E64AC44D1C097D5E007C6713 /* ZSRTest1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest1ViewController.m; sourceTree = "<group>"; };
-		E64AC4511C097D8C007C6713 /* ZSRTest2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest2ViewController.h; sourceTree = "<group>"; };
-		E64AC4521C097D8C007C6713 /* ZSRTest2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest2ViewController.m; sourceTree = "<group>"; };
-		E64AC4531C097D8C007C6713 /* ZSRTest2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest2ViewController.xib; sourceTree = "<group>"; };
-		E64AC4561C0981E1007C6713 /* ZSRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRNavigationController.h; sourceTree = "<group>"; };
-		E64AC4571C0981E1007C6713 /* ZSRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRNavigationController.m; sourceTree = "<group>"; };
-		E64AC45C1C09849E007C6713 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		E64AC45D1C09849E007C6713 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		E64AC4691C098F4A007C6713 /* ZSRTest1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest1ViewController.xib; sourceTree = "<group>"; };
-		E64AC4701C0990C3007C6713 /* ZSRTest3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest3ViewController.h; sourceTree = "<group>"; };
-		E64AC4711C0990C3007C6713 /* ZSRTest3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest3ViewController.m; sourceTree = "<group>"; };
-		E64AC4721C0990C3007C6713 /* ZSRTest3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest3ViewController.xib; sourceTree = "<group>"; };
-		E66724EF1C0890B90070FCAD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E66724F01C0890B90070FCAD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E66724F11C0890B90070FCAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
+		E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRDiscoverViewController.m; sourceTree = "<group>"; };
+		E64AC47E1C0996F8007C6713 /* ZSRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRHomeViewController.h; sourceTree = "<group>"; };
+		E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRHomeViewController.m; sourceTree = "<group>"; };
+		E64AC4841C0996F8007C6713 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E64AC4851C0996F8007C6713 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		E64AC4871C0996F8007C6713 /* ZSRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRNavigationController.h; sourceTree = "<group>"; };
+		E64AC4881C0996F8007C6713 /* ZSRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRNavigationController.m; sourceTree = "<group>"; };
+		E64AC4891C0996F8007C6713 /* ZSRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTabBarViewController.h; sourceTree = "<group>"; };
+		E64AC48A1C0996F8007C6713 /* ZSRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTabBarViewController.m; sourceTree = "<group>"; };
+		E64AC48E1C0996F8007C6713 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E64AC48F1C0996F8007C6713 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E64AC4901C0996F8007C6713 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E64AC4941C0996F8007C6713 /* ZSRMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRMessageCenterViewController.h; sourceTree = "<group>"; };
+		E64AC4951C0996F8007C6713 /* ZSRMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRMessageCenterViewController.m; sourceTree = "<group>"; };
+		E64AC49A1C0996F8007C6713 /* ZSRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRProfileViewController.h; sourceTree = "<group>"; };
+		E64AC49B1C0996F8007C6713 /* ZSRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRProfileViewController.m; sourceTree = "<group>"; };
+		E64AC4A21C0996F8007C6713 /* ZSRTest1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest1ViewController.h; sourceTree = "<group>"; };
+		E64AC4A31C0996F8007C6713 /* ZSRTest1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest1ViewController.m; sourceTree = "<group>"; };
+		E64AC4A41C0996F8007C6713 /* ZSRTest1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest1ViewController.xib; sourceTree = "<group>"; };
+		E64AC4A51C0996F8007C6713 /* ZSRTest2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest2ViewController.h; sourceTree = "<group>"; };
+		E64AC4A61C0996F8007C6713 /* ZSRTest2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest2ViewController.m; sourceTree = "<group>"; };
+		E64AC4A71C0996F8007C6713 /* ZSRTest2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest2ViewController.xib; sourceTree = "<group>"; };
+		E64AC4A81C0996F8007C6713 /* ZSRTest3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest3ViewController.h; sourceTree = "<group>"; };
+		E64AC4A91C0996F8007C6713 /* ZSRTest3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest3ViewController.m; sourceTree = "<group>"; };
+		E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest3ViewController.xib; sourceTree = "<group>"; };
 		E66724F41C08933F0070FCAD /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
-		E691DE091C08AF2800A2F135 /* ZSRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRHomeViewController.h; sourceTree = "<group>"; };
-		E691DE0A1C08AF2800A2F135 /* ZSRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRHomeViewController.m; sourceTree = "<group>"; };
-		E691DE0C1C08AF6F00A2F135 /* ZSRMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRMessageCenterViewController.h; sourceTree = "<group>"; };
-		E691DE0D1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRMessageCenterViewController.m; sourceTree = "<group>"; };
-		E691DE0F1C08AF8900A2F135 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
-		E691DE101C08AF8900A2F135 /* ZSRDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRDiscoverViewController.m; sourceTree = "<group>"; };
-		E691DE121C08AFA700A2F135 /* ZSRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRProfileViewController.h; sourceTree = "<group>"; };
-		E691DE131C08AFA700A2F135 /* ZSRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRProfileViewController.m; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,37 +110,229 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E66724EE1C0890B90070FCAD /* Classes */ = {
+		E64AC4751C0996F8007C6713 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E66724EF1C0890B90070FCAD /* AppDelegate.h */,
-				E66724F01C0890B90070FCAD /* AppDelegate.m */,
-				E66724F11C0890B90070FCAD /* main.m */,
-				E691DE091C08AF2800A2F135 /* ZSRHomeViewController.h */,
-				E691DE0A1C08AF2800A2F135 /* ZSRHomeViewController.m */,
-				E691DE0C1C08AF6F00A2F135 /* ZSRMessageCenterViewController.h */,
-				E64AC4491C0976A2007C6713 /* ZSRTabBarViewController.h */,
-				E64AC44A1C0976A2007C6713 /* ZSRTabBarViewController.m */,
-				E691DE0D1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m */,
-				E691DE0F1C08AF8900A2F135 /* ZSRDiscoverViewController.h */,
-				E691DE101C08AF8900A2F135 /* ZSRDiscoverViewController.m */,
-				E691DE121C08AFA700A2F135 /* ZSRProfileViewController.h */,
-				E691DE131C08AFA700A2F135 /* ZSRProfileViewController.m */,
-				E64AC44C1C097D5E007C6713 /* ZSRTest1ViewController.h */,
-				E64AC44D1C097D5E007C6713 /* ZSRTest1ViewController.m */,
-				E64AC4691C098F4A007C6713 /* ZSRTest1ViewController.xib */,
-				E64AC4511C097D8C007C6713 /* ZSRTest2ViewController.h */,
-				E64AC4521C097D8C007C6713 /* ZSRTest2ViewController.m */,
-				E64AC4531C097D8C007C6713 /* ZSRTest2ViewController.xib */,
-				E64AC4701C0990C3007C6713 /* ZSRTest3ViewController.h */,
-				E64AC4711C0990C3007C6713 /* ZSRTest3ViewController.m */,
-				E64AC4721C0990C3007C6713 /* ZSRTest3ViewController.xib */,
-				E64AC4561C0981E1007C6713 /* ZSRNavigationController.h */,
-				E64AC4571C0981E1007C6713 /* ZSRNavigationController.m */,
-				E64AC45C1C09849E007C6713 /* UIView+Extension.h */,
-				E64AC45D1C09849E007C6713 /* UIView+Extension.m */,
+				E64AC4761C0996F8007C6713 /* Discover */,
+				E64AC47C1C0996F8007C6713 /* Home */,
+				E64AC4821C0996F8007C6713 /* Main */,
+				E64AC4921C0996F8007C6713 /* Messagecenter */,
+				E64AC4981C0996F8007C6713 /* Profile */,
+				E64AC49E1C0996F8007C6713 /* Temp */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		E64AC4761C0996F8007C6713 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4771C0996F8007C6713 /* Controller */,
+				E64AC47A1C0996F8007C6713 /* Model */,
+				E64AC47B1C0996F8007C6713 /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		E64AC4771C0996F8007C6713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */,
+				E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E64AC47A1C0996F8007C6713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E64AC47B1C0996F8007C6713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E64AC47C1C0996F8007C6713 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC47D1C0996F8007C6713 /* Controller */,
+				E64AC4801C0996F8007C6713 /* Model */,
+				E64AC4811C0996F8007C6713 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E64AC47D1C0996F8007C6713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC47E1C0996F8007C6713 /* ZSRHomeViewController.h */,
+				E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E64AC4801C0996F8007C6713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E64AC4811C0996F8007C6713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E64AC4821C0996F8007C6713 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4831C0996F8007C6713 /* Category */,
+				E64AC4861C0996F8007C6713 /* Controller */,
+				E64AC48B1C0996F8007C6713 /* Lib */,
+				E64AC48C1C0996F8007C6713 /* Model */,
+				E64AC48D1C0996F8007C6713 /* Other */,
+				E64AC4911C0996F8007C6713 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E64AC4831C0996F8007C6713 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4841C0996F8007C6713 /* UIView+Extension.h */,
+				E64AC4851C0996F8007C6713 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E64AC4861C0996F8007C6713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4871C0996F8007C6713 /* ZSRNavigationController.h */,
+				E64AC4881C0996F8007C6713 /* ZSRNavigationController.m */,
+				E64AC4891C0996F8007C6713 /* ZSRTabBarViewController.h */,
+				E64AC48A1C0996F8007C6713 /* ZSRTabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E64AC48B1C0996F8007C6713 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E64AC48C1C0996F8007C6713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E64AC48D1C0996F8007C6713 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC48E1C0996F8007C6713 /* AppDelegate.h */,
+				E64AC48F1C0996F8007C6713 /* AppDelegate.m */,
+				E64AC4901C0996F8007C6713 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E64AC4911C0996F8007C6713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E64AC4921C0996F8007C6713 /* Messagecenter */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4931C0996F8007C6713 /* Controller */,
+				E64AC4961C0996F8007C6713 /* Model */,
+				E64AC4971C0996F8007C6713 /* View */,
+			);
+			path = Messagecenter;
+			sourceTree = "<group>";
+		};
+		E64AC4931C0996F8007C6713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4941C0996F8007C6713 /* ZSRMessageCenterViewController.h */,
+				E64AC4951C0996F8007C6713 /* ZSRMessageCenterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E64AC4961C0996F8007C6713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E64AC4971C0996F8007C6713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E64AC4981C0996F8007C6713 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4991C0996F8007C6713 /* Controller */,
+				E64AC49C1C0996F8007C6713 /* Model */,
+				E64AC49D1C0996F8007C6713 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E64AC4991C0996F8007C6713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC49A1C0996F8007C6713 /* ZSRProfileViewController.h */,
+				E64AC49B1C0996F8007C6713 /* ZSRProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E64AC49C1C0996F8007C6713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E64AC49D1C0996F8007C6713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E64AC49E1C0996F8007C6713 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				E64AC4A21C0996F8007C6713 /* ZSRTest1ViewController.h */,
+				E64AC4A31C0996F8007C6713 /* ZSRTest1ViewController.m */,
+				E64AC4A41C0996F8007C6713 /* ZSRTest1ViewController.xib */,
+				E64AC4A51C0996F8007C6713 /* ZSRTest2ViewController.h */,
+				E64AC4A61C0996F8007C6713 /* ZSRTest2ViewController.m */,
+				E64AC4A71C0996F8007C6713 /* ZSRTest2ViewController.xib */,
+				E64AC4A81C0996F8007C6713 /* ZSRTest3ViewController.h */,
+				E64AC4A91C0996F8007C6713 /* ZSRTest3ViewController.m */,
+				E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */,
+			);
+			path = Temp;
 			sourceTree = "<group>";
 		};
 		E6F4BC051C088A8400C30E47 = {
@@ -166,7 +358,7 @@
 		E6F4BC101C088A8500C30E47 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
-				E66724EE1C0890B90070FCAD /* Classes */,
+				E64AC4751C0996F8007C6713 /* Classes */,
 				E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */,
 				E6F4BC221C088A8500C30E47 /* Info.plist */,
 				E6F4BC111C088A8500C30E47 /* Supporting Files */,
@@ -308,11 +500,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64AC4B51C0996F8007C6713 /* ZSRTest1ViewController.xib in Resources */,
 				E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */,
 				E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */,
-				E64AC46A1C098F4A007C6713 /* ZSRTest1ViewController.xib in Resources */,
-				E64AC4551C097D8C007C6713 /* ZSRTest2ViewController.xib in Resources */,
-				E64AC4741C0990C3007C6713 /* ZSRTest3ViewController.xib in Resources */,
+				E64AC4B71C0996F8007C6713 /* ZSRTest2ViewController.xib in Resources */,
+				E64AC4B91C0996F8007C6713 /* ZSRTest3ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,18 +529,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E64AC4731C0990C3007C6713 /* ZSRTest3ViewController.m in Sources */,
-				E691DE141C08AFA700A2F135 /* ZSRProfileViewController.m in Sources */,
-				E66724F31C0890B90070FCAD /* main.m in Sources */,
-				E64AC45E1C09849E007C6713 /* UIView+Extension.m in Sources */,
-				E64AC4541C097D8C007C6713 /* ZSRTest2ViewController.m in Sources */,
-				E64AC44F1C097D5E007C6713 /* ZSRTest1ViewController.m in Sources */,
-				E691DE0B1C08AF2800A2F135 /* ZSRHomeViewController.m in Sources */,
-				E691DE0E1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m in Sources */,
-				E691DE111C08AF8900A2F135 /* ZSRDiscoverViewController.m in Sources */,
-				E64AC4581C0981E1007C6713 /* ZSRNavigationController.m in Sources */,
-				E66724F21C0890B90070FCAD /* AppDelegate.m in Sources */,
-				E64AC44B1C0976A2007C6713 /* ZSRTabBarViewController.m in Sources */,
+				E64AC4B81C0996F8007C6713 /* ZSRTest3ViewController.m in Sources */,
+				E64AC4AD1C0996F8007C6713 /* UIView+Extension.m in Sources */,
+				E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */,
+				E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */,
+				E64AC4B31C0996F8007C6713 /* ZSRProfileViewController.m in Sources */,
+				E64AC4B41C0996F8007C6713 /* ZSRTest1ViewController.m in Sources */,
+				E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */,
+				E64AC4AF1C0996F8007C6713 /* ZSRTabBarViewController.m in Sources */,
+				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
+				E64AC4B21C0996F8007C6713 /* ZSRMessageCenterViewController.m in Sources */,
+				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
+				E64AC4AE1C0996F8007C6713 /* ZSRNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
