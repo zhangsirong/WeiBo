@@ -22,6 +22,7 @@
 		E64AC4B71C0996F8007C6713 /* ZSRTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4A71C0996F8007C6713 /* ZSRTest2ViewController.xib */; };
 		E64AC4B81C0996F8007C6713 /* ZSRTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4A91C0996F8007C6713 /* ZSRTest3ViewController.m */; };
 		E64AC4B91C0996F8007C6713 /* ZSRTest3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */; };
+		E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4BB1C099AC8007C6713 /* UIBarButtonItem+Extension.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -72,6 +73,8 @@
 		E64AC4A81C0996F8007C6713 /* ZSRTest3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTest3ViewController.h; sourceTree = "<group>"; };
 		E64AC4A91C0996F8007C6713 /* ZSRTest3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTest3ViewController.m; sourceTree = "<group>"; };
 		E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRTest3ViewController.xib; sourceTree = "<group>"; };
+		E64AC4BA1C099AC8007C6713 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		E64AC4BB1C099AC8007C6713 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		E66724F41C08933F0070FCAD /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 		E64AC4831C0996F8007C6713 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E64AC4BA1C099AC8007C6713 /* UIBarButtonItem+Extension.h */,
+				E64AC4BB1C099AC8007C6713 /* UIBarButtonItem+Extension.m */,
 				E64AC4841C0996F8007C6713 /* UIView+Extension.h */,
 				E64AC4851C0996F8007C6713 /* UIView+Extension.m */,
 			);
@@ -539,6 +544,7 @@
 				E64AC4AF1C0996F8007C6713 /* ZSRTabBarViewController.m in Sources */,
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
 				E64AC4B21C0996F8007C6713 /* ZSRMessageCenterViewController.m in Sources */,
+				E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */,
 				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
 				E64AC4AE1C0996F8007C6713 /* ZSRNavigationController.m in Sources */,
 			);
