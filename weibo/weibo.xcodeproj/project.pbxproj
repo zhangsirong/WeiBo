@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E64AC44B1C0976A2007C6713 /* ZSRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC44A1C0976A2007C6713 /* ZSRTabBarViewController.m */; };
 		E66724F21C0890B90070FCAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E66724F01C0890B90070FCAD /* AppDelegate.m */; };
 		E66724F31C0890B90070FCAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E66724F11C0890B90070FCAD /* main.m */; };
 		E691DE0B1C08AF2800A2F135 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691DE0A1C08AF2800A2F135 /* ZSRHomeViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E64AC4491C0976A2007C6713 /* ZSRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTabBarViewController.h; sourceTree = "<group>"; };
+		E64AC44A1C0976A2007C6713 /* ZSRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTabBarViewController.m; sourceTree = "<group>"; };
 		E66724EF1C0890B90070FCAD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E66724F01C0890B90070FCAD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E66724F11C0890B90070FCAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				E691DE091C08AF2800A2F135 /* ZSRHomeViewController.h */,
 				E691DE0A1C08AF2800A2F135 /* ZSRHomeViewController.m */,
 				E691DE0C1C08AF6F00A2F135 /* ZSRMessageCenterViewController.h */,
+				E64AC4491C0976A2007C6713 /* ZSRTabBarViewController.h */,
+				E64AC44A1C0976A2007C6713 /* ZSRTabBarViewController.m */,
 				E691DE0D1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m */,
 				E691DE0F1C08AF8900A2F135 /* ZSRDiscoverViewController.h */,
 				E691DE101C08AF8900A2F135 /* ZSRDiscoverViewController.m */,
@@ -301,6 +306,7 @@
 				E691DE0E1C08AF6F00A2F135 /* ZSRMessageCenterViewController.m in Sources */,
 				E691DE111C08AF8900A2F135 /* ZSRDiscoverViewController.m in Sources */,
 				E66724F21C0890B90070FCAD /* AppDelegate.m in Sources */,
+				E64AC44B1C0976A2007C6713 /* ZSRTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
