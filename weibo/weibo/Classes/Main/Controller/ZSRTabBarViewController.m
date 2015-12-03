@@ -12,8 +12,9 @@
 #import "ZSRDiscoverViewController.h"
 #import "ZSRProfileViewController.h"
 #import "ZSRNavigationController.h"
+#import "ZSRTabBar.h"
 
-@interface ZSRTabBarViewController ()
+@interface ZSRTabBarViewController ()<ZSRTabBarDelegate>
 
 @end
 
@@ -33,6 +34,12 @@
     
     ZSRProfileViewController *profile = [[ZSRProfileViewController alloc] init];
     [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+    
+    // 2.更换系统自带的tabbar
+    //    self.tabBar = [[ZSRTabBar alloc] init];
+    ZSRTabBar *tabBar = [[ZSRTabBar alloc] init];
+    tabBar.delegate = self;
+    [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 
 /**
@@ -69,16 +76,11 @@
     [self addChildViewController:nav];
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - HWTabBarDelegate代理方法
+- (void)tabBarDidClickPlusButton:(ZSRTabBar *)tabBar
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self presentViewController:vc animated:YES completion:nil];
 }
-*/
-
 @end
