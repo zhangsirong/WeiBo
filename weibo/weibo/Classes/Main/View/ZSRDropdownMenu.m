@@ -95,6 +95,11 @@
 //    CGRect newFrame = [from.superview convertRect:from.frame toView:window];
     self.containerView.centerX = CGRectGetMidX(newFrame);
     self.containerView.y = CGRectGetMaxY(newFrame);
+    // 通知外界，自己显示了
+    if ([self.delegate respondsToSelector:@selector(dropdownMenuDidShow:)]) {
+        [self.delegate dropdownMenuDidShow:self];
+    }
+
 }
 
 /**
@@ -103,6 +108,11 @@
 - (void)dismiss
 {
     [self removeFromSuperview];
+    
+    // 通知外界，自己被销毁了
+    if ([self.delegate respondsToSelector:@selector(dropdownMenuDidDismiss:)]) {
+        [self.delegate dropdownMenuDidDismiss:self];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

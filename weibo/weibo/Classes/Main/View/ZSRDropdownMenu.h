@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZSRDropdownMenu;
+
+@protocol ZSRDropdownMenuDelegate <NSObject>
+@optional
+- (void)dropdownMenuDidDismiss:(ZSRDropdownMenu *)menu;
+- (void)dropdownMenuDidShow:(ZSRDropdownMenu *)menu;
+@end
+
 @interface ZSRDropdownMenu : UIView
+@property (nonatomic, weak) id<ZSRDropdownMenuDelegate> delegate;
 + (instancetype)menu;
 
 /**
