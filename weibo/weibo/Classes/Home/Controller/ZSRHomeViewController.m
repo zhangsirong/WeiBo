@@ -7,7 +7,7 @@
 //
 
 #import "ZSRHomeViewController.h"
-
+#import "ZSRSearchBar.h"
 @interface ZSRHomeViewController ()
 
 @end
@@ -22,6 +22,11 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
+    // 创建搜索框对象
+    ZSRSearchBar *searchBar = [ZSRSearchBar searchBar];
+    searchBar.width = 100;
+    searchBar.height = 35;
+    [self.view addSubview:searchBar];
 }
 
 - (void)friendSearch

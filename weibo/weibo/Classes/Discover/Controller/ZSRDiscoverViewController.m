@@ -7,6 +7,7 @@
 //
 
 #import "ZSRDiscoverViewController.h"
+#import "ZSRSearchBar.h"
 
 @interface ZSRDiscoverViewController ()
 
@@ -16,33 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    UISearchBar *searchBar = [[UISearchBar alloc] init];
-//    searchBar.height = 30;
-//    searchBar.scopeBarBackgroundImage = [UIImage imageNamed:@"searchbar_textfield_background"];
-//    self.navigationItem.titleView = searchBar;
-    
+
     // 创建搜索框对象
-    UITextField *searchBar = [[UITextField alloc] init];
+    ZSRSearchBar *searchBar = [ZSRSearchBar searchBar];
     searchBar.width = 300;
     searchBar.height = 30;
-    searchBar.font = [UIFont systemFontOfSize:15];
-    searchBar.placeholder = @"请输入搜索条件";
-    searchBar.background = [UIImage imageNamed:@"searchbar_textfield_background"];
-    
-    // 设置左边的放大镜图标
-    //    UIImage *image = [UIImage imageNamed:@"searchbar_textfield_search_icon"];
-    // 通过initWithImage来创建初始化UIImageView，UIImageView的尺寸默认就等于image的尺寸
-    //    UIImageView *searchIcon = [[UIImageView alloc] initWithImage:image];
-    
-    // 通过init来创建初始化绝大部分控件，控件都是没有尺寸
-    UIImageView *searchIcon = [[UIImageView alloc] init];
-    searchIcon.image = [UIImage imageNamed:@"searchbar_textfield_search_icon"];
-    searchIcon.width = 30;
-    searchIcon.height = 30;
-    searchIcon.contentMode = UIViewContentModeCenter;
-    searchBar.leftView = searchIcon;
-    searchBar.leftViewMode = UITextFieldViewModeAlways;
-    
+    [self.view addSubview:searchBar];
     self.navigationItem.titleView = searchBar;
 }
 

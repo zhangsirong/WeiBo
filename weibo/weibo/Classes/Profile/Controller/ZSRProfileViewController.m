@@ -8,7 +8,7 @@
 
 #import "ZSRProfileViewController.h"
 #import "ZSRTest1ViewController.h"
-
+#import "ZSRSearchBar.h"
 @interface ZSRProfileViewController ()
 
 @end
@@ -18,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:0 target:self action:@selector(setting)];
+    // 分类：UITextField\UISearchBar
+    // 自定义控件：新建一个类，继承自UITextField
+    // 搞个工具类
+    
+    // 创建搜索框对象
+    ZSRSearchBar *searchBar = [ZSRSearchBar searchBar];
+    searchBar.width = 300;
+    searchBar.height = 30;
+    [self.view addSubview:searchBar];
 }
 
 - (void)setting
