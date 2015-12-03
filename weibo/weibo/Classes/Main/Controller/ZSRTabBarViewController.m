@@ -61,7 +61,7 @@
     selectTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
-    childVc.view.backgroundColor = ZSRRandomColor;
+//    childVc.view.backgroundColor = ZSRRandomColor;
     
     // 先给外面传进来的小控制器 包装 一个导航控制器
     ZSRNavigationController *nav = [[ZSRNavigationController alloc] initWithRootViewController:childVc];

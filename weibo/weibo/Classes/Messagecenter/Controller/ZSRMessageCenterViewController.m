@@ -20,13 +20,17 @@
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"写私信" style:(UIBarButtonItemStylePlain) target:self action:@selector(composeMsg)];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
      // 这个item不能点击(目前放在viewWillAppear就能显示disable下的主题)
-    self.navigationItem.rightBarButtonItem.enabled = NO;
+//    self.navigationItem.rightBarButtonItem.enabled = NO;
+
+   
 
 }
 - (void)composeMsg{
