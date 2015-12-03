@@ -22,11 +22,63 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
-    // 创建搜索框对象
-    ZSRSearchBar *searchBar = [ZSRSearchBar searchBar];
-    searchBar.width = 100;
-    searchBar.height = 35;
-    [self.view addSubview:searchBar];
+    
+     /* 中间的标题按钮 */
+    //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *titleButton = [[UIButton alloc] init];
+    titleButton.width = 150;
+    titleButton.height = 30;
+//    titleButton.backgroundColor = ZSRRandomColor;
+    self.navigationItem.titleView = titleButton;
+    
+    // 设置图片和文字
+    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+//        titleButton.imageView.backgroundColor = [UIColor redColor];
+//        titleButton.titleLabel.backgroundColor = [UIColor blueColor];
+    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+    
+    // 监听标题点击
+    [titleButton addTarget:self action:@selector(titleClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = titleButton;
+    // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
+
+}
+
+/**
+ *  标题点击
+ */
+- (void)titleClick
+{
+    // 这样获得的窗口，是目前显示在屏幕最上面的窗口
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    
+    // 添加蒙板（用于拦截灰色图片外面的点击事件）
+    UIView *cover = [[UIView alloc] init];
+    cover.backgroundColor = [UIColor clearColor];
+    cover.frame = window.bounds;
+    [window addSubview:cover];
+    
+    // 添加带箭头的灰色图片
+    UIImageView *dropdownMenu = [[UIImageView alloc] init];
+    dropdownMenu.image = [UIImage imageNamed:@"popover_background"];
+    dropdownMenu.width = 217;
+    dropdownMenu.height = 217;
+    dropdownMenu.y = 40;
+    
+    [dropdownMenu addSubview:[UIButton buttonWithType:UIButtonTypeContactAdd]];
+    
+    [window addSubview:dropdownMenu];
+    
+    
+    // self.view.window = [UIApplication sharedApplication].keyWindow
+    // 建议使用[UIApplication sharedApplication].keyWindow获得窗口
+    
+    NSLog(@"%@", [UIApplication sharedApplication].windows);
 }
 
 - (void)friendSearch
