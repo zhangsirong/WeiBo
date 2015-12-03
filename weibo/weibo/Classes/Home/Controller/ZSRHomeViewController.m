@@ -8,6 +8,9 @@
 
 #import "ZSRHomeViewController.h"
 #import "ZSRSearchBar.h"
+#import "ZSRDropdownMenu.h"
+#import "ZSRTitleMenuViewController.h"
+
 @interface ZSRHomeViewController ()
 
 @end
@@ -42,43 +45,48 @@
     titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
     
     // 监听标题点击
-    [titleButton addTarget:self action:@selector(titleClick) forControlEvents:UIControlEventTouchUpInside];
+    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.titleView = titleButton;
     // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
+    
+    
+    UIView *grayView = [[UIView alloc] init];
+    grayView.width = 200;
+    grayView.height = 70;
+    grayView.x = 20;
+    grayView.y = 30;
+    grayView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:grayView];
+    
+    UIButton *btn = [[UIButton alloc] init];
+    btn.width = 100;
+    btn.x = 140;
+    btn.y = 30;
+    btn.height = 30;
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    [grayView addSubview:btn];
+
 
 }
 
 /**
  *  标题点击
  */
-- (void)titleClick
-{
-    // 这样获得的窗口，是目前显示在屏幕最上面的窗口
-    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+- (void)titleClick:(UIButton *)titleButton{
     
-    // 添加蒙板（用于拦截灰色图片外面的点击事件）
-    UIView *cover = [[UIView alloc] init];
-    cover.backgroundColor = [UIColor clearColor];
-    cover.frame = window.bounds;
-    [window addSubview:cover];
+    // 1.创建下拉菜单
+    ZSRDropdownMenu *menu = [ZSRDropdownMenu menu];
     
-    // 添加带箭头的灰色图片
-    UIImageView *dropdownMenu = [[UIImageView alloc] init];
-    dropdownMenu.image = [UIImage imageNamed:@"popover_background"];
-    dropdownMenu.width = 217;
-    dropdownMenu.height = 217;
-    dropdownMenu.y = 40;
+    // 2.设置内容
+    ZSRTitleMenuViewController *vc = [[ZSRTitleMenuViewController alloc] init];
+    vc.view.height = 150;
+    vc.view.width = 150;
+    menu.contentController = vc;
     
-    [dropdownMenu addSubview:[UIButton buttonWithType:UIButtonTypeContactAdd]];
-    
-    [window addSubview:dropdownMenu];
-    
-    
-    // self.view.window = [UIApplication sharedApplication].keyWindow
-    // 建议使用[UIApplication sharedApplication].keyWindow获得窗口
-    
-    NSLog(@"%@", [UIApplication sharedApplication].windows);
+    // 3.显示
+    [menu showFrom:titleButton];
 }
 
 - (void)friendSearch
