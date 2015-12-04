@@ -12,6 +12,8 @@
 #import "ZSRDiscoverViewController.h"
 #import "ZSRProfileViewController.h"
 #import "ZSRTabBarViewController.h"
+#import "ZSRNewfeatureViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -25,8 +27,9 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     //2.设置根控制器
-    ZSRTabBarViewController *tabbarVc = [[ZSRTabBarViewController alloc] init];
-    self.window.rootViewController = tabbarVc;
+//    ZSRTabBarViewController *tabbarVc = [[ZSRTabBarViewController alloc] init];
+    ZSRNewfeatureViewController *newfVc = [[ZSRNewfeatureViewController alloc] init];
+    self.window.rootViewController = newfVc;
     
     //4.显示窗口
     [self.window makeKeyAndVisible];

@@ -23,6 +23,7 @@
 		E64AC4B81C0996F8007C6713 /* ZSRTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4A91C0996F8007C6713 /* ZSRTest3ViewController.m */; };
 		E64AC4B91C0996F8007C6713 /* ZSRTest3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */; };
 		E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4BB1C099AC8007C6713 /* UIBarButtonItem+Extension.m */; };
+		E6836A6F1C11C45100BFD103 /* ZSRNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */; };
 		E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A01C105906003B7903 /* ZSRSearchBar.m */; };
 		E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A31C106DDF003B7903 /* ZSRDropdownMenu.m */; };
 		E6B6C3AA1C10754F003B7903 /* ZSRTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */; };
@@ -80,6 +81,8 @@
 		E64AC4BA1C099AC8007C6713 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		E64AC4BB1C099AC8007C6713 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		E66724F41C08933F0070FCAD /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
+		E6836A6D1C11C45100BFD103 /* ZSRNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRNewfeatureViewController.h; sourceTree = "<group>"; };
+		E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRNewfeatureViewController.m; sourceTree = "<group>"; };
 		E6B6C39F1C105906003B7903 /* ZSRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRSearchBar.h; sourceTree = "<group>"; };
 		E6B6C3A01C105906003B7903 /* ZSRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRSearchBar.m; sourceTree = "<group>"; };
 		E6B6C3A21C106DDF003B7903 /* ZSRDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDropdownMenu.h; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		E64AC4751C0996F8007C6713 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E6836A6C1C11B54700BFD103 /* Newfeature */,
 				E64AC4761C0996F8007C6713 /* Discover */,
 				E64AC47C1C0996F8007C6713 /* Home */,
 				E64AC4821C0996F8007C6713 /* Main */,
@@ -345,6 +349,15 @@
 				E64AC4AA1C0996F8007C6713 /* ZSRTest3ViewController.xib */,
 			);
 			path = Temp;
+			sourceTree = "<group>";
+		};
+		E6836A6C1C11B54700BFD103 /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				E6836A6D1C11C45100BFD103 /* ZSRNewfeatureViewController.h */,
+				E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */,
+			);
+			path = Newfeature;
 			sourceTree = "<group>";
 		};
 		E6B6C39E1C1058F2003B7903 /* View */ = {
@@ -570,6 +583,7 @@
 				E6B6C3AA1C10754F003B7903 /* ZSRTitleMenuViewController.m in Sources */,
 				E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */,
 				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
+				E6836A6F1C11C45100BFD103 /* ZSRNewfeatureViewController.m in Sources */,
 				E64AC4AE1C0996F8007C6713 /* ZSRNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
