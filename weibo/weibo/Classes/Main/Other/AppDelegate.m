@@ -27,18 +27,29 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     //2.设置根控制器
-//    ZSRTabBarViewController *tabbarVc = [[ZSRTabBarViewController alloc] init];
-    ZSRNewfeatureViewController *newfVc = [[ZSRNewfeatureViewController alloc] init];
-    self.window.rootViewController = newfVc;
+    // 上一次的使用版本（存储在沙盒中的版本号）
+    NSString *key = @"CFBundleVersion";
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
     
-    //4.显示窗口
+    // 当前软件的版本号（从Info.plist中获得）
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+    
+    if ([currentVersion isEqualToString:lastVersion]) { // 版本号相同：这次打开和上次打开的是同一个版本
+        ZSRTabBarViewController *tabbarVc = [[ZSRTabBarViewController alloc] init];
+        self.window.rootViewController = tabbarVc;
+    } else { // 这次打开的版本和上一次不一样，显示新特性
+         ZSRNewfeatureViewController *newfVc = [[ZSRNewfeatureViewController alloc] init];
+         self.window.rootViewController = newfVc;
+        
+        // 将当前的版本号存进沙盒
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    //3.显示窗口
     [self.window makeKeyAndVisible];
     
     return YES;
 }
-
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

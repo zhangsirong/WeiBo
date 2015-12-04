@@ -7,6 +7,8 @@
 //
 
 #import "ZSRNewfeatureViewController.h"
+#import "ZSRTabBarViewController.h"
+
 #define ZSRNewfeatureCount 4
 @interface ZSRNewfeatureViewController ()<UIScrollViewDelegate>
 
@@ -135,6 +137,8 @@
     startBtn.centerX = shareBtn.centerX;
     startBtn.centerY = imageView.height * 0.75;
     [startBtn setTitle:@"开始微博" forState:UIControlStateNormal];
+    [startBtn addTarget:self action:@selector(startClick) forControlEvents:UIControlEventTouchUpInside];
+
     [imageView addSubview:startBtn];
     
 }
@@ -143,6 +147,23 @@
 {
     //状态取反
     shareBtn.selected = !shareBtn.selected;
+}
+
+- (void)startClick
+{
+    // 切换到ZSRTabBarController
+    /*
+     切换控制器的手段
+     1.push：依赖于UINavigationController，控制器的切换是可逆的，比如A切换到B，B又可以回到A
+     2.modal：控制器的切换是可逆的，比如A切换到B，B又可以回到A
+     3.切换window的rootViewController
+     */
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    window.rootViewController = [[ZSRTabBarViewController alloc] init];
+    
+    // modal方式，不建议采取：新特性控制器不会销毁
+    //    ZSRTabBarViewController *main = [[ZSRTabBarViewController alloc] init];
+    //    [self presentViewController:main animated:YES completion:nil];
 }
 
 - (void)dealloc
@@ -163,7 +184,7 @@
  一个控件用肉眼看不见，有哪些可能
  1.根本没有创建实例化这个控件
  2.没有设置尺寸
- 3.控件的颜色跟父控件的背景色一样（实际上已经显示了，只不过用肉眼看不见）
+ 3.控件的颜色跟父控件的背景色一样（实际上®已经显示了，只不过用肉眼看不见）
  4.透明度alpha <= 0.01
  5.hidden = YES
  6.没有添加到父控件中
