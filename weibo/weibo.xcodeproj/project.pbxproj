@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E64ABC221C148988000C733A /* ZSRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E64ABC211C148988000C733A /* ZSRAccount.m */; };
 		E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */; };
 		E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */; };
 		E64AC4AD1C0996F8007C6713 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4851C0996F8007C6713 /* UIView+Extension.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E64ABC201C148988000C733A /* ZSRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccount.h; sourceTree = "<group>"; };
+		E64ABC211C148988000C733A /* ZSRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccount.m; sourceTree = "<group>"; };
 		E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
 		E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRDiscoverViewController.m; sourceTree = "<group>"; };
 		E64AC47E1C0996F8007C6713 /* ZSRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRHomeViewController.h; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 		E6629BFD1C12CA3A008E1A61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E64ABC201C148988000C733A /* ZSRAccount.h */,
+				E64ABC211C148988000C733A /* ZSRAccount.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -696,6 +701,7 @@
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
+				E64ABC221C148988000C733A /* ZSRAccount.m in Sources */,
 				E6629BD01C12C82C008E1A61 /* AFURLRequestSerialization.m in Sources */,
 				E64AC4B21C0996F8007C6713 /* ZSRMessageCenterViewController.m in Sources */,
 				E6B6C3AA1C10754F003B7903 /* ZSRTitleMenuViewController.m in Sources */,
