@@ -10,6 +10,8 @@
 #import "ZSRSearchBar.h"
 #import "ZSRDropdownMenu.h"
 #import "ZSRTitleMenuViewController.h"
+#import "AFNetworking.h"
+#import "ZSRAccountTool.h"
 
 @interface ZSRHomeViewController ()<ZSRDropdownMenuDelegate>
 
@@ -20,30 +22,84 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //设置导航栏内容
+    [self setupNav];
+    //获得用户信息
+    [self setupUserInfo];
     
-    /* 设置导航栏上面的内容 */
+
+
+}
+
+/**
+ * 获得用户信息
+ */
+- (void)setupUserInfo
+{
+    
+    // https://api.weibo.com/2/users/show.json
+    // access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
+    // uid	false	int64	需要查询的用户ID。
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    // 2.拼接请求参数
+    ZSRAccount *account = [ZSRAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
+    
+    // 3.发送请求
+    [mgr GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        ZSRLog(@"请求成功-%@", responseObject);
+
+        // 标题按钮
+        UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+        // 设置名字
+        NSString *name = responseObject[@"name"];
+        [titleButton setTitle:name forState:UIControlStateNormal];
+        
+        // 存储昵称到沙盒中
+        account.name = name;
+        [ZSRAccountTool saveAccount:account];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ZSRLog(@"请求失败-%@", error);
+    }];
+
+}
+/**
+ *  设置导航栏上面的内容
+ */
+- (void)setupNav
+{
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
     
-     /* 中间的标题按钮 */
+    /* 中间的标题按钮 */
     //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIButton *titleButton = [[UIButton alloc] init];
-    titleButton.width = 150;
+    titleButton.width = 200;
     titleButton.height = 30;
-//    titleButton.backgroundColor = ZSRRandomColor;
+    //    titleButton.backgroundColor = ZSRRandomColor;
     self.navigationItem.titleView = titleButton;
     
     // 设置图片和文字
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    NSString *name = [ZSRAccountTool account].name;
+    [titleButton setTitle:name ? name : @"首页" forState:UIControlStateNormal];
     [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
-//        titleButton.imageView.backgroundColor = [UIColor redColor];
-//        titleButton.titleLabel.backgroundColor = [UIColor blueColor];
-    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+    //        titleButton.imageView.backgroundColor = [UIColor redColor];
+    //        titleButton.titleLabel.backgroundColor = [UIColor blueColor];
+    
+    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 150, 0, 0);
     titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+    
+//    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+//    CGFloat left = [titleButton.currentTitle sizeWithAttributes:attrs].width;
+//    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, left, 0, 0);
     
     // 监听标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -68,8 +124,6 @@
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
     [grayView addSubview:btn];
-
-
 }
 
 /**

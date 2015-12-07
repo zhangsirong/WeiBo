@@ -44,6 +44,7 @@
 		E6B6C3AD1C1089EC003B7903 /* ZSRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */; };
 		E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */; };
 		E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */; };
+		E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -139,6 +140,7 @@
 		E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccountTool.m; sourceTree = "<group>"; };
 		E6CBAFFC1C15BC1A009D5F1B /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		E64AC4831C0996F8007C6713 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */,
 				E64AC4BA1C099AC8007C6713 /* UIBarButtonItem+Extension.h */,
 				E64AC4BB1C099AC8007C6713 /* UIBarButtonItem+Extension.m */,
 				E64AC4841C0996F8007C6713 /* UIView+Extension.h */,
@@ -719,6 +722,7 @@
 				E6629BD21C12C82C008E1A61 /* AFURLSessionManager.m in Sources */,
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
 				E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */,
+				E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */,
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
 				E64ABC221C148988000C733A /* ZSRAccount.m in Sources */,

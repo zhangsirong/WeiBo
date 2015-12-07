@@ -10,7 +10,6 @@
 #import "ZSROAuthViewController.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD+MJ.h"
-#import "ZSRAccount.h"
 #import "ZSRAccountTool.h"
 
 @interface ZSROAuthViewController ()<UIWebViewDelegate>

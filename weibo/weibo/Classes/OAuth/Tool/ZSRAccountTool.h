@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class ZSRAccount;
+#import "ZSRAccount.h"
 @interface ZSRAccountTool : NSObject
 /**
  *  存储账号信息

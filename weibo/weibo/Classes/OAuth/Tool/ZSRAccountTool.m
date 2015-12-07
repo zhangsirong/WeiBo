@@ -11,7 +11,7 @@
 
 
 #import "ZSRAccountTool.h"
-#import "ZSRAccount.h"
+
 @implementation ZSRAccountTool
 
 
@@ -22,8 +22,7 @@
  */
 + (void)saveAccount:(ZSRAccount *)account
 {
-    //获得账号存储的时间（accessToken的产生时间)
-    account.created_time = [NSDate date];
+
     // 自定义对象的存储必须用NSKeyedArchiver，不再有什么writeToFile方法
     [NSKeyedArchiver archiveRootObject:account toFile:ZSRAccountPath];
 }

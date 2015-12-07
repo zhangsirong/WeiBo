@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ZSROAuthViewController.h"
-#import "ZSRAccount.h"
 #import "ZSRAccountTool.h"
 
 @interface AppDelegate ()
