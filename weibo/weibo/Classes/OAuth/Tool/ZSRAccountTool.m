@@ -48,7 +48,7 @@
     
     //获得当前时间
     NSDate *now = [NSDate date];
-        ZSRLog(@"%@,%@",expiresTime , now);
+//        ZSRLog(@"%@,%@",expiresTime , now);
     //如果expiresTime <= now   过期
     /**
      NSOrderedAscending = -1L,

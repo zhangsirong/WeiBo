@@ -13,10 +13,13 @@
 #import "AFNetworking.h"
 #import "ZSRAccountTool.h"
 #import "ZSRTitleButton.h"
+#import "UIImageView+WebCache.h"
 
 @interface ZSRHomeViewController ()<ZSRDropdownMenuDelegate>
-
-@end
+/**
+ *  微博数组（里面放的都是微博字典，一个字典对象就代表一条微博）
+ */
+@property (nonatomic, strong) NSArray *statuses;@end
 
 @implementation ZSRHomeViewController
 
@@ -29,8 +32,40 @@
     
     //获得用户信息
     [self setupUserInfo];
+    
+    // 加载最新的微博数据
+    [self loadNewStatus];
+
 
 }
+
+/**
+ *  加载最新的微博数据
+ */
+- (void)loadNewStatus
+{
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    // 2.拼接请求参数
+    ZSRAccount *account = [ZSRAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"count"] = @20;
+    
+    // 3.发送请求
+    [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        // 取得"微博字典"数组
+//        ZSRLog(@"%@",responseObject);
+        self.statuses = responseObject[@"statuses"];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ZSRLog(@"请求失败-%@", error);
+    }];
+}
+
 
 /**
  * 获得用户信息
@@ -152,14 +187,42 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.statuses.count;;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"status";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    
+    // 取出这行对应的微博字典
+    NSDictionary *status = self.statuses[indexPath.row];
+    
+    // 取出这条微博的作者（用户）
+    NSDictionary *user = status[@"user"];
+    cell.textLabel.text = user[@"name"];
+    
+    // 设置微博的文字
+    cell.detailTextLabel.text = status[@"text"];
+    
+    // 设置头像
+    NSString *imageUrl = user[@"profile_image_url"];
+    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placehoder];
+    
+    return cell;
+}
+
+/**
+ 1.将字典转为模型
+ 2.能够下拉刷新最新的微博数据
+ 3.能够上拉加载更多的微博数据
+ */
 @end
+
