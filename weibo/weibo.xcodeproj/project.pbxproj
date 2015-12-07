@@ -45,6 +45,7 @@
 		E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */; };
 		E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */; };
 		E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */; };
+		E6CBB0031C15CD1B009D5F1B /* ZSRTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBB0021C15CD1B009D5F1B /* ZSRTitleButton.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -141,6 +142,8 @@
 		E6CBAFFC1C15BC1A009D5F1B /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		E6CBB0011C15CD1B009D5F1B /* ZSRTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTitleButton.h; sourceTree = "<group>"; };
+		E6CBB0021C15CD1B009D5F1B /* ZSRTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTitleButton.m; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 			children = (
 				E6B6C3A81C10754F003B7903 /* ZSRTitleMenuViewController.h */,
 				E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */,
+				E6CBB0011C15CD1B009D5F1B /* ZSRTitleButton.h */,
+				E6CBB0021C15CD1B009D5F1B /* ZSRTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,6 +711,7 @@
 				E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */,
 				E6629BCF1C12C82C008E1A61 /* AFURLConnectionOperation.m in Sources */,
 				E6629BCE1C12C82C008E1A61 /* AFSecurityPolicy.m in Sources */,
+				E6CBB0031C15CD1B009D5F1B /* ZSRTitleButton.m in Sources */,
 				E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */,
 				E6629BD51C12C82C008E1A61 /* MBProgressHUD.m in Sources */,
 				E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */,

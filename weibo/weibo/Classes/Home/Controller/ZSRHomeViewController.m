@@ -12,6 +12,7 @@
 #import "ZSRTitleMenuViewController.h"
 #import "AFNetworking.h"
 #import "ZSRAccountTool.h"
+#import "ZSRTitleButton.h"
 
 @interface ZSRHomeViewController ()<ZSRDropdownMenuDelegate>
 
@@ -22,12 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     //设置导航栏内容
     [self setupNav];
+    
     //获得用户信息
     [self setupUserInfo];
-    
-
 
 }
 
@@ -51,7 +52,7 @@
     
     // 3.发送请求
     [mgr GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        ZSRLog(@"请求成功-%@", responseObject);
+//        ZSRLog(@"请求成功-%@", responseObject);
 
         // 标题按钮
         UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
@@ -77,54 +78,25 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
     
     /* 中间的标题按钮 */
-    //    UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIButton *titleButton = [[UIButton alloc] init];
-    titleButton.width = 200;
-    titleButton.height = 30;
-    //    titleButton.backgroundColor = ZSRRandomColor;
-    self.navigationItem.titleView = titleButton;
-    
-    // 设置图片和文字
+    ZSRTitleButton *titleButton = [[ZSRTitleButton alloc] init];
+   // 设置图片和文字
     NSString *name = [ZSRAccountTool account].name;
-    [titleButton setTitle:name ? name : @"首页" forState:UIControlStateNormal];
-    [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
-    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
-    //        titleButton.imageView.backgroundColor = [UIColor redColor];
-    //        titleButton.titleLabel.backgroundColor = [UIColor blueColor];
-    
-    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 150, 0, 0);
-    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
-    
-//    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-//    CGFloat left = [titleButton.currentTitle sizeWithAttributes:attrs].width;
-//    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, left, 0, 0);
-    
-    // 监听标题点击
+    [titleButton setTitle:name?name:@"首页" forState:UIControlStateNormal];    // 监听标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
-    
+//    titleButton.backgroundColor = ZSRRandomColor;
     self.navigationItem.titleView = titleButton;
-    // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
-    
-    
-    UIView *grayView = [[UIView alloc] init];
-    grayView.width = 200;
-    grayView.height = 70;
-    grayView.x = 20;
-    grayView.y = 30;
-    grayView.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:grayView];
-    
-    UIButton *btn = [[UIButton alloc] init];
-    btn.width = 100;
-    btn.x = 140;
-    btn.y = 30;
-    btn.height = 30;
-    btn.backgroundColor = [UIColor redColor];
-    [btn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
-    [grayView addSubview:btn];
 }
+    // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
+    // 什么情况下建议使用imageEdgeInsets、titleEdgeInsets
+    // 如果按钮内部的图片、文字固定，用这2个属性来设置间距，会比较简单
+    // 标题宽度
+    //    CGFloat titleW = titleButton.titleLabel.width * [UIScreen mainScreen].scale;
+    ////    // 乘上scale系数，保证retina屏幕上的图片宽度是正确的
+    //    CGFloat imageW = titleButton.imageView.width * [UIScreen mainScreen].scale;
+    //    CGFloat left = titleW + imageW;
+    //    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, left, 0, 0);
+    
+
 
 /**
  *  标题点击
