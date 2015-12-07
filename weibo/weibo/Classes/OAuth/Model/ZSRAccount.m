@@ -27,6 +27,9 @@
     [encoder encodeObject:self.access_token forKey:@"access_token"];
     [encoder encodeObject:self.expires_in forKey:@"expires_in"];
     [encoder encodeObject:self.uid forKey:@"uid"];
+    [encoder encodeObject:self.created_time forKey:@"created_time"];
+
+
 }
 
 /**
@@ -39,6 +42,7 @@
         self.access_token = [decoder decodeObjectForKey:@"access_token"];
         self.expires_in = [decoder decodeObjectForKey:@"expires_in"];
         self.uid = [decoder decodeObjectForKey:@"uid"];
+        self.created_time = [decoder decodeObjectForKey:@"created_time"];
     }
     return self;
 }

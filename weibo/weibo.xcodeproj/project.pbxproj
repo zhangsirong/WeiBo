@@ -42,6 +42,7 @@
 		E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A31C106DDF003B7903 /* ZSRDropdownMenu.m */; };
 		E6B6C3AA1C10754F003B7903 /* ZSRTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */; };
 		E6B6C3AD1C1089EC003B7903 /* ZSRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */; };
+		E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -133,6 +134,8 @@
 		E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTitleMenuViewController.m; sourceTree = "<group>"; };
 		E6B6C3AB1C1089EC003B7903 /* ZSRTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTabBar.h; sourceTree = "<group>"; };
 		E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTabBar.m; sourceTree = "<group>"; };
+		E6CBAFF91C15A1BE009D5F1B /* ZSRAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccountTool.h; sourceTree = "<group>"; };
+		E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccountTool.m; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -390,6 +393,7 @@
 		E6629B591C12B6DA008E1A61 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				E6CBAFF81C15A1A3009D5F1B /* Tool */,
 				E6629BFD1C12CA3A008E1A61 /* Model */,
 				E6629B5A1C12B6DA008E1A61 /* Controller */,
 			);
@@ -481,6 +485,15 @@
 				E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E6CBAFF81C15A1A3009D5F1B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E6CBAFF91C15A1BE009D5F1B /* ZSRAccountTool.h */,
+				E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		E6F4BC051C088A8400C30E47 = {
@@ -699,6 +712,7 @@
 				E6629BCA1C12C82C008E1A61 /* AFHTTPRequestOperation.m in Sources */,
 				E6629BD21C12C82C008E1A61 /* AFURLSessionManager.m in Sources */,
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
+				E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */,
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
 				E64ABC221C148988000C733A /* ZSRAccount.m in Sources */,

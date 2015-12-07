@@ -15,6 +15,7 @@
 #import "ZSRNewfeatureViewController.h"
 #import "ZSROAuthViewController.h"
 #import "ZSRAccount.h"
+#import "ZSRAccountTool.h"
 
 @interface AppDelegate ()
 
@@ -29,10 +30,8 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     //2.设置根控制器
-    // 沙盒路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
-    ZSRAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+
+    ZSRAccount *account = [ZSRAccountTool account];
     
     if (account) { // 之前已经登录成功过
         // 上一次的使用版本（存储在沙盒中的版本号）
