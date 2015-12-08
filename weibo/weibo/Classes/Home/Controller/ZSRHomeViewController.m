@@ -14,14 +14,25 @@
 #import "ZSRAccountTool.h"
 #import "ZSRTitleButton.h"
 #import "UIImageView+WebCache.h"
+#import "ZSRUser.h"
+#import "ZSRStatus.h"
 
 @interface ZSRHomeViewController ()<ZSRDropdownMenuDelegate>
 /**
  *  微博数组（里面放的都是微博字典，一个字典对象就代表一条微博）
  */
-@property (nonatomic, strong) NSArray *statuses;@end
+@property (nonatomic, strong) NSMutableArray *statuses;
+@end
 
 @implementation ZSRHomeViewController
+
+- (NSMutableArray *)statuses
+{
+    if (!_statuses) {
+        self.statuses = [NSMutableArray array];
+    }
+    return _statuses;
+}
 
 - (void)viewDidLoad
 {
@@ -57,7 +68,12 @@
     [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         // 取得"微博字典"数组
 //        ZSRLog(@"%@",responseObject);
-        self.statuses = responseObject[@"statuses"];
+         NSArray *dictArray = responseObject[@"statuses"];
+        // 将 "微博字典"数组 转为 "微博模型"数组
+        for (NSDictionary *dict in dictArray) {
+            ZSRStatus *status = [ZSRStatus statusWithDict:dict];
+            [self.statuses addObject:status];
+        }
         
         // 刷新表格
         [self.tableView reloadData];
@@ -92,11 +108,12 @@
         // 标题按钮
         UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
         // 设置名字
-        NSString *name = responseObject[@"name"];
-        [titleButton setTitle:name forState:UIControlStateNormal];
+        ZSRUser *user = [ZSRUser userWithDict:responseObject];
+//        NSString *name = responseObject[@"name"];
+        [titleButton setTitle:user.name forState:UIControlStateNormal];
         
         // 存储昵称到沙盒中
-        account.name = name;
+        account.name = user.name;
         [ZSRAccountTool saveAccount:account];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         ZSRLog(@"请求失败-%@", error);
@@ -202,19 +219,22 @@
     }
     
     // 取出这行对应的微博字典
-    NSDictionary *status = self.statuses[indexPath.row];
-    
+//    NSDictionary *status = self.statuses[indexPath.row];
+    ZSRStatus *status = self.statuses[indexPath.row];
+
     // 取出这条微博的作者（用户）
-    NSDictionary *user = status[@"user"];
-    cell.textLabel.text = user[@"name"];
-    
+//    NSDictionary *user = status[@"user"];
+//    cell.textLabel.text = user[@"name"];
+    ZSRUser *user = status.user;
+    cell.textLabel.text = user.name;
     // 设置微博的文字
-    cell.detailTextLabel.text = status[@"text"];
-    
+//    cell.detailTextLabel.text = status[@"text"];
+    cell.detailTextLabel.text = status.text;
     // 设置头像
-    NSString *imageUrl = user[@"profile_image_url"];
+//    NSString *imageUrl = user[@"profile_image_url"];
+    
     UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placehoder];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:placehoder];
     
     return cell;
 }

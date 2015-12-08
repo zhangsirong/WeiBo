@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48341C16E7B20077EBE7 /* ZSRUser.m */; };
+		E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48371C16E8210077EBE7 /* ZSRStatus.m */; };
 		E64ABC221C148988000C733A /* ZSRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E64ABC211C148988000C733A /* ZSRAccount.m */; };
 		E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */; };
 		E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */; };
@@ -86,6 +88,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E61B48331C16E7B20077EBE7 /* ZSRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRUser.h; sourceTree = "<group>"; };
+		E61B48341C16E7B20077EBE7 /* ZSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRUser.m; sourceTree = "<group>"; };
+		E61B48361C16E8210077EBE7 /* ZSRStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatus.h; sourceTree = "<group>"; };
+		E61B48371C16E8210077EBE7 /* ZSRStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatus.m; sourceTree = "<group>"; };
 		E64ABC201C148988000C733A /* ZSRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccount.h; sourceTree = "<group>"; };
 		E64ABC211C148988000C733A /* ZSRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccount.m; sourceTree = "<group>"; };
 		E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
@@ -300,6 +306,10 @@
 		E64AC4801C0996F8007C6713 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E61B48331C16E7B20077EBE7 /* ZSRUser.h */,
+				E61B48341C16E7B20077EBE7 /* ZSRUser.m */,
+				E61B48361C16E8210077EBE7 /* ZSRStatus.h */,
+				E61B48371C16E8210077EBE7 /* ZSRStatus.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -827,7 +837,9 @@
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
 				E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */,
 				E6CBB0341C15D925009D5F1B /* UIImageView+WebCache.m in Sources */,
+				E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */,
 				E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */,
+				E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */,
 				E6CBB0351C15D925009D5F1B /* UIView+WebCacheOperation.m in Sources */,
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
