@@ -36,6 +36,7 @@
     return _statuses;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,8 +53,51 @@
     // 集成上拉刷新控件
     [self setupUpRefresh];
     
+    // 获得未读数
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(setupUnreadCount) userInfo:nil repeats:YES];
+    // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 
+}
 
+/**
+ *  获得未读数
+ */
+- (void)setupUnreadCount
+{
+        ZSRLog(@"setupUnreadCount");
+//        return;
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    // 2.拼接请求参数
+    ZSRAccount *account = [ZSRAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
+    
+    // 3.发送请求
+    [mgr GET:@"https://rm.api.weibo.com/2/remind/unread_count.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        // 微博的未读数
+//        int status = [responseObject[@"status"] intValue];
+        // 设置提醒数字
+//        self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", status];
+        
+        // @20 --> @"20"
+        // NSNumber --> NSString
+        // 设置提醒数字(微博的未读数)
+        NSString *status = [responseObject[@"status"] description];
+
+        if ([status isEqualToString:@"0"]) { // 如果是0，得清空数字
+            self.tabBarItem.badgeValue = nil;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        } else { // 非0情况
+            self.tabBarItem.badgeValue = status;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = status.intValue;
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ZSRLog(@"请求失败-%@", error);
+    }];
 }
 
 /**
@@ -67,7 +111,7 @@
 }
 
 /**
- *  集成刷新控件
+ *  集成下拉刷新控件
  */
 - (void)setupDownRefresh
 {
@@ -180,6 +224,9 @@
  */
 - (void)showNewStatusCount:(int)count
 {
+    // 刷新成功(清空图标数字)
+    self.tabBarItem.badgeValue = nil;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
     // 1.创建label
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
