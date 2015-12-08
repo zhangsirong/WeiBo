@@ -17,6 +17,7 @@
 #import "ZSRUser.h"
 #import "ZSRStatus.h"
 #import "MJExtension.h"
+#import "ZSRLoadMoreFooter.h"
 
 @interface ZSRHomeViewController ()<ZSRDropdownMenuDelegate>
 /**
@@ -45,18 +46,30 @@
     //获得用户信息
     [self setupUserInfo];
     
-    // 集成刷新控件
-    [self setupRefresh];
+    // 集成下拉刷新控件
+    [self setupDownRefresh];
     
+    // 集成上拉刷新控件
+    [self setupUpRefresh];
     
 
 
 }
 
 /**
+ *  集成上拉刷新控件
+ */
+- (void)setupUpRefresh
+{
+    ZSRLoadMoreFooter *footer = [ZSRLoadMoreFooter footer];
+    footer.hidden = YES;
+    self.tableView.tableFooterView = footer;
+}
+
+/**
  *  集成刷新控件
  */
-- (void)setupRefresh
+- (void)setupDownRefresh
 {
     // 1.添加刷新控件
     UIRefreshControl *control = [[UIRefreshControl alloc] init];
@@ -113,6 +126,49 @@
         
         // 结束刷新刷新
         [control endRefreshing];
+    }];
+}
+
+/**
+ *  加载更多的微博数据
+ */
+- (void)loadMoreStatus
+{
+    // 1.请求管理者
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    // 2.拼接请求参数
+    ZSRAccount *account = [ZSRAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    
+    // 取出最后面的微博（最新的微博，ID最大的微博）
+    ZSRStatus *lastStatus = [self.statuses lastObject];
+    if (lastStatus) {
+        // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
+        // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
+        long long maxId = lastStatus.idstr.longLongValue - 1;
+        params[@"max_id"] = @(maxId);
+    }
+    
+    // 3.发送请求
+    [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        // 将 "微博字典"数组 转为 "微博模型"数组
+        NSArray *newStatuses = [ZSRStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        // 将更多的微博数据，添加到总数组的最后面
+        [self.statuses addObjectsFromArray:newStatuses];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+        // 结束刷新(隐藏footer)
+        self.tableView.tableFooterView.hidden = YES;
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ZSRLog(@"请求失败-%@", error);
+        
+        // 结束刷新
+        self.tableView.tableFooterView.hidden = YES;
     }];
 }
 
@@ -289,7 +345,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     return self.statuses.count;;
 }
 
@@ -318,10 +374,33 @@
     return cell;
 }
 
-/**
- 1.将字典转为模型
- 2.能够下拉刷新最新的微博数据
- 3.能够上拉加载更多的微博数据
- */
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //    scrollView == self.tableView == self.view
+    // 如果tableView还没有数据，就直接返回
+    if (self.statuses.count == 0 || self.tableView.tableFooterView.isHidden == NO) return;
+    
+    CGFloat offsetY = scrollView.contentOffset.y;
+    
+    // 当最后一个cell完全显示在眼前时，contentOffset的y值
+    CGFloat judgeOffsetY = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.height - self.tableView.tableFooterView.height;
+    if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
+        // 显示footer
+        self.tableView.tableFooterView.hidden = NO;
+        
+        // 加载更多的微博数据
+        [self loadMoreStatus];
+    }
+    
+    /*
+     contentInset：除具体内容以外的边框尺寸
+     contentSize: 里面的具体内容（header、cell、footer），除掉contentInset以外的尺寸
+     contentOffset:
+     1.它可以用来判断scrollView滚动到什么位置
+     2.指scrollView的内容超出了scrollView顶部的距离（除掉contentInset以外的尺寸）
+     */
+}
+
 @end
 

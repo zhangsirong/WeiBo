@@ -20,6 +20,8 @@
 		E61B48591C16F6CB0077EBE7 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B484C1C16F6CB0077EBE7 /* NSObject+MJKeyValue.m */; };
 		E61B485A1C16F6CB0077EBE7 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B484E1C16F6CB0077EBE7 /* NSObject+MJProperty.m */; };
 		E61B485B1C16F6CB0077EBE7 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48501C16F6CB0077EBE7 /* NSString+MJExtension.m */; };
+		E61B48601C17164F0077EBE7 /* ZSRLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */; };
+		E61B48621C1716620077EBE7 /* ZSRLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */; };
 		E64ABC221C148988000C733A /* ZSRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E64ABC211C148988000C733A /* ZSRAccount.m */; };
 		E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */; };
 		E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */; };
@@ -126,6 +128,9 @@
 		E61B484E1C16F6CB0077EBE7 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		E61B484F1C16F6CB0077EBE7 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		E61B48501C16F6CB0077EBE7 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		E61B485E1C17164F0077EBE7 /* ZSRLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRLoadMoreFooter.h; sourceTree = "<group>"; };
+		E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRLoadMoreFooter.m; sourceTree = "<group>"; };
+		E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRLoadMoreFooter.xib; sourceTree = "<group>"; };
 		E64ABC201C148988000C733A /* ZSRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccount.h; sourceTree = "<group>"; };
 		E64ABC211C148988000C733A /* ZSRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccount.m; sourceTree = "<group>"; };
 		E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
@@ -385,6 +390,9 @@
 				E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */,
 				E6CBB0011C15CD1B009D5F1B /* ZSRTitleButton.h */,
 				E6CBB0021C15CD1B009D5F1B /* ZSRTitleButton.m */,
+				E61B485E1C17164F0077EBE7 /* ZSRLoadMoreFooter.h */,
+				E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */,
+				E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -843,6 +851,7 @@
 				E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */,
 				E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */,
 				E64AC4B71C0996F8007C6713 /* ZSRTest2ViewController.xib in Resources */,
+				E61B48621C1716620077EBE7 /* ZSRLoadMoreFooter.xib in Resources */,
 				E64AC4B91C0996F8007C6713 /* ZSRTest3ViewController.xib in Resources */,
 				E6629BD41C12C82C008E1A61 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -890,6 +899,7 @@
 				E61B48531C16F6CB0077EBE7 /* MJFoundation.m in Sources */,
 				E6CBB02A1C15D925009D5F1B /* SDWebImageDecoder.m in Sources */,
 				E6629BCC1C12C82C008E1A61 /* AFHTTPSessionManager.m in Sources */,
+				E61B48601C17164F0077EBE7 /* ZSRLoadMoreFooter.m in Sources */,
 				E64AC4B31C0996F8007C6713 /* ZSRProfileViewController.m in Sources */,
 				E6B6C3AD1C1089EC003B7903 /* ZSRTabBar.m in Sources */,
 				E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */,
