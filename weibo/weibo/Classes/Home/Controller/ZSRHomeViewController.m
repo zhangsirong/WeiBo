@@ -47,6 +47,8 @@
     
     // 集成刷新控件
     [self setupRefresh];
+    
+    
 
 
 }
@@ -56,9 +58,16 @@
  */
 - (void)setupRefresh
 {
+    // 1.添加刷新控件
     UIRefreshControl *control = [[UIRefreshControl alloc] init];
+    // 只有用户通过手动下拉刷新，才会触发UIControlEventValueChanged事件
     [control addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:control];
+    // 2.马上进入刷新状态(仅仅是显示刷新状态，并不会触发UIControlEventValueChanged事件)
+    [control beginRefreshing];
+    
+    // 3.马上加载数据
+    [self refreshStateChange:control];
 }
 
 /**
@@ -94,6 +103,9 @@
         // 刷新表格
         [self.tableView reloadData];
         
+        // 显示最新微博的数量
+        [self showNewStatusCount:newStatuses.count];
+        
         // 结束刷新刷新
         [control endRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -102,6 +114,56 @@
         // 结束刷新刷新
         [control endRefreshing];
     }];
+}
+
+
+/**
+ *  显示最新微博的数量
+ *
+ *  @param count 最新微博的数量
+ */
+- (void)showNewStatusCount:(int)count
+{
+    // 1.创建label
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.width = [UIScreen mainScreen].bounds.size.width;
+    label.height = 35;
+    
+    // 2.设置其他属性
+    if (count == 0) {
+        label.text = @"没有新的微博数据，稍后再试";
+    } else {
+        label.text = [NSString stringWithFormat:@"共有%d条新的微博数据", count];
+    }
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:16];
+    
+    // 3.添加
+    label.y = 64 - label.height;
+    // 将label添加到导航控制器的view中，并且是盖在导航栏下边
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    // 4.动画
+    // 先利用1s的时间，让label往下移动一段距离
+    CGFloat duration = 1.0; // 动画的时间
+    [UIView animateWithDuration:duration animations:^{
+        //        label.y += label.height;
+        label.transform = CGAffineTransformMakeTranslation(0, label.height);
+    } completion:^(BOOL finished) {
+        // 延迟1s后，再利用1s的时间，让label往上移动一段距离（回到一开始的状态）
+        CGFloat delay = 1.0; // 延迟1s
+        // UIViewAnimationOptionCurveLinear:匀速
+        [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+            //            label.y -= label.height;
+            label.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
+    
+    // 如果某个动画执行完毕后，又要回到动画执行前的状态，建议使用transform来做动画
 }
 
 /**
