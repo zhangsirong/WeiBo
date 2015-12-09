@@ -22,6 +22,8 @@
 		E61B485B1C16F6CB0077EBE7 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48501C16F6CB0077EBE7 /* NSString+MJExtension.m */; };
 		E61B48601C17164F0077EBE7 /* ZSRLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */; };
 		E61B48621C1716620077EBE7 /* ZSRLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */; };
+		E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */; };
+		E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */; };
 		E64ABC221C148988000C733A /* ZSRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E64ABC211C148988000C733A /* ZSRAccount.m */; };
 		E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */; };
 		E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */; };
@@ -131,6 +133,10 @@
 		E61B485E1C17164F0077EBE7 /* ZSRLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRLoadMoreFooter.h; sourceTree = "<group>"; };
 		E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRLoadMoreFooter.m; sourceTree = "<group>"; };
 		E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRLoadMoreFooter.xib; sourceTree = "<group>"; };
+		E63F3E3A1C1860AB000DF621 /* ZSRStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusCell.h; sourceTree = "<group>"; };
+		E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusCell.m; sourceTree = "<group>"; };
+		E63F3E3D1C18614A000DF621 /* ZSRStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusFrame.h; sourceTree = "<group>"; };
+		E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusFrame.m; sourceTree = "<group>"; };
 		E64ABC201C148988000C733A /* ZSRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccount.h; sourceTree = "<group>"; };
 		E64ABC211C148988000C733A /* ZSRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccount.m; sourceTree = "<group>"; };
 		E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
@@ -379,6 +385,8 @@
 				E61B48341C16E7B20077EBE7 /* ZSRUser.m */,
 				E61B48361C16E8210077EBE7 /* ZSRStatus.h */,
 				E61B48371C16E8210077EBE7 /* ZSRStatus.m */,
+				E63F3E3D1C18614A000DF621 /* ZSRStatusFrame.h */,
+				E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +401,8 @@
 				E61B485E1C17164F0077EBE7 /* ZSRLoadMoreFooter.h */,
 				E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */,
 				E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */,
+				E63F3E3A1C1860AB000DF621 /* ZSRStatusCell.h */,
+				E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -885,6 +895,7 @@
 				E64AC4AD1C0996F8007C6713 /* UIView+Extension.m in Sources */,
 				E6CBB0291C15D925009D5F1B /* SDWebImageCompat.m in Sources */,
 				E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */,
+				E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */,
 				E6629BCF1C12C82C008E1A61 /* AFURLConnectionOperation.m in Sources */,
 				E61B485B1C16F6CB0077EBE7 /* NSString+MJExtension.m in Sources */,
 				E6CBB02F1C15D925009D5F1B /* UIButton+WebCache.m in Sources */,
@@ -922,6 +933,7 @@
 				E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */,
 				E6CBB0341C15D925009D5F1B /* UIImageView+WebCache.m in Sources */,
 				E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */,
+				E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */,
 				E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */,
 				E61B48591C16F6CB0077EBE7 /* NSObject+MJKeyValue.m in Sources */,
 				E61B48511C16F6CB0077EBE7 /* MJDictionaryCache.m in Sources */,

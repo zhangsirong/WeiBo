@@ -9,5 +9,15 @@
 #import "ZSRUser.h"
 
 @implementation ZSRUser
+- (void)setMbtype:(int)mbtype
+{
+    _mbtype = mbtype;
+    
+    self.vip = mbtype > 2;
+}
 
+//- (BOOL)isVip
+//{
+//    return self.mbrank > 2;
+//}
 @end

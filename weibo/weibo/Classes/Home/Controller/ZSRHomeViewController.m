@@ -18,22 +18,24 @@
 #import "ZSRStatus.h"
 #import "MJExtension.h"
 #import "ZSRLoadMoreFooter.h"
+#import "ZSRStatusCell.h"
+#import "ZSRStatusFrame.h"
 
 @interface ZSRHomeViewController ()<ZSRDropdownMenuDelegate>
 /**
- *  微博数组（里面放的都是微博字典，一个字典对象就代表一条微博）
+ *  微博数组（里面放的都是HWStatusFrame模型，一个HWStatusFrame对象就代表一条微博）
  */
-@property (nonatomic, strong) NSMutableArray *statuses;
+@property (nonatomic, strong) NSMutableArray *statusFrames;
 @end
 
 @implementation ZSRHomeViewController
 
-- (NSMutableArray *)statuses
+- (NSMutableArray *)statusFrames
 {
-    if (!_statuses) {
-        self.statuses = [NSMutableArray array];
+    if (!_statusFrames) {
+        self.statusFrames = [NSMutableArray array];
     }
-    return _statuses;
+    return _statusFrames;
 }
 
 
@@ -65,7 +67,7 @@
  */
 - (void)setupUnreadCount
 {
-        ZSRLog(@"setupUnreadCount");
+//        ZSRLog(@"setupUnreadCount");
 //        return;
     // 1.请求管理者
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
@@ -118,19 +120,33 @@
     // 1.添加刷新控件
     UIRefreshControl *control = [[UIRefreshControl alloc] init];
     // 只有用户通过手动下拉刷新，才会触发UIControlEventValueChanged事件
-    [control addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
+    [control addTarget:self action:@selector(loadNewStatus:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:control];
     // 2.马上进入刷新状态(仅仅是显示刷新状态，并不会触发UIControlEventValueChanged事件)
     [control beginRefreshing];
     
     // 3.马上加载数据
-    [self refreshStateChange:control];
+    [self loadNewStatus:control];
+}
+
+/**
+ *  将ZSRStatus模型转为ZSRStatusFrame模型
+ */
+- (NSArray *)stausFramesWithStatuses:(NSArray *)statuses
+{
+    NSMutableArray *frames = [NSMutableArray array];
+    for (ZSRStatus *status in statuses) {
+        ZSRStatusFrame *f = [[ZSRStatusFrame alloc] init];
+        f.status = status;
+        [frames addObject:f];
+    }
+    return frames;
 }
 
 /**
  *  UIRefreshControl进入刷新状态：加载最新的数据
  */
-- (void)refreshStateChange:(UIRefreshControl *)control
+- (void)loadNewStatus:(UIRefreshControl *)control
 {
     // 1.请求管理者
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
@@ -141,21 +157,24 @@
     params[@"access_token"] = account.access_token;
     
     // 取出最前面的微博（最新的微博，ID最大的微博）
-    ZSRStatus *firstStatus = [self.statuses firstObject];
-    if (firstStatus) {
+    ZSRStatusFrame *firstStatusFrames = [self.statusFrames firstObject];
+    if (firstStatusFrames) {
         // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0
-        params[@"since_id"] = firstStatus.idstr;
+        params[@"since_id"] = firstStatusFrames.status.idstr;
     }
     
     // 3.发送请求
     [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        ZSRLog(@"%@",responseObject);
         // 将 "微博字典"数组 转为 "微博模型"数组
         NSArray *newStatuses = [ZSRStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        
+        // 将 ZSRStatus数组 转为 ZSRStatusFrame数组
+        NSArray *newFrames = [self stausFramesWithStatuses:newStatuses];
+
         // 将最新的微博数据，添加到总数组的最前面
         NSRange range = NSMakeRange(0, newStatuses.count);
         NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:range];
-        [self.statuses insertObjects:newStatuses atIndexes:set];
+        [self.statusFrames insertObjects:newFrames atIndexes:set];
         
         // 刷新表格
         [self.tableView reloadData];
@@ -173,6 +192,8 @@
     }];
 }
 
+
+
 /**
  *  加载更多的微博数据
  */
@@ -187,11 +208,11 @@
     params[@"access_token"] = account.access_token;
     
     // 取出最后面的微博（最新的微博，ID最大的微博）
-    ZSRStatus *lastStatus = [self.statuses lastObject];
-    if (lastStatus) {
+    ZSRStatusFrame *lastStatusF = [self.statusFrames lastObject];
+    if (lastStatusF) {
         // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
         // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
-        long long maxId = lastStatus.idstr.longLongValue - 1;
+        long long maxId = lastStatusF.status.idstr.longLongValue - 1;
         params[@"max_id"] = @(maxId);
     }
     
@@ -199,9 +220,11 @@
     [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         // 将 "微博字典"数组 转为 "微博模型"数组
         NSArray *newStatuses = [ZSRStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        
+        // 将 ZSRStatus数组 转为 HWStatusFrame数组
+        NSArray *newFrames = [self stausFramesWithStatuses:newStatuses];
+
         // 将更多的微博数据，添加到总数组的最后面
-        [self.statuses addObjectsFromArray:newStatuses];
+        [self.statusFrames addObjectsFromArray:newFrames];
         
         // 刷新表格
         [self.tableView reloadData];
@@ -365,7 +388,7 @@
     NSLog(@"pop");
 }
 
-#pragma mark - HWDropdownMenuDelegate
+#pragma mark - ZSRDropdownMenuDelegate
 /**
  *  下拉菜单被销毁了
  */
@@ -393,30 +416,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.statuses.count;;
+    return self.statusFrames.count;;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"status";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    // 获得cell
+    ZSRStatusCell *cell = [ZSRStatusCell cellWithTableView:tableView];
     
-    // 取出这行对应的微博字典
-    ZSRStatus *status = self.statuses[indexPath.row];
-
-    // 取出这条微博的作者（用户）
-    ZSRUser *user = status.user;
-    cell.textLabel.text = user.name;
-    // 设置微博的文字
-
-    cell.detailTextLabel.text = status.text;
-    // 设置头像
-   
-    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:placehoder];
+    // 给cell传递模型数据
+    cell.statusFrame = self.statusFrames[indexPath.row];
     
     return cell;
 }
@@ -426,7 +435,7 @@
 {
     //    scrollView == self.tableView == self.view
     // 如果tableView还没有数据，就直接返回
-    if (self.statuses.count == 0 || self.tableView.tableFooterView.isHidden == NO) return;
+    if (self.statusFrames.count == 0 || self.tableView.tableFooterView.isHidden == NO) return;
     
     CGFloat offsetY = scrollView.contentOffset.y;
     
@@ -449,5 +458,11 @@
      */
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ZSRStatusFrame *frame = self.statusFrames[indexPath.row];
+    return frame.cellHeight;
+    
+}
 @end
 
