@@ -20,6 +20,8 @@
 // 正文字体
 #define ZSRStatusCellContentFont [UIFont systemFontOfSize:14]
 
+// 被转发微博的正文字体
+#define ZSRStatusCellRetweetContentFont [UIFont systemFontOfSize:13]
 
 @class ZSRStatus;
 @interface ZSRStatusFrame : NSObject
