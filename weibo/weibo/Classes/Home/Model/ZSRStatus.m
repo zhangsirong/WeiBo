@@ -7,7 +7,14 @@
 //
 
 #import "ZSRStatus.h"
-#import "ZSRUser.h"
+#import "ZSRPhoto.h"
+
 @implementation ZSRStatus
+
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"pic_urls" : [ZSRPhoto class]};
+}
+
 
 @end

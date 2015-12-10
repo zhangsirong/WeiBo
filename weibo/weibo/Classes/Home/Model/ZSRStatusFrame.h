@@ -20,6 +20,7 @@
 // 正文字体
 #define ZSRStatusCellContentFont [UIFont systemFontOfSize:14]
 
+
 @class ZSRStatus;
 @interface ZSRStatusFrame : NSObject
 
@@ -40,6 +41,13 @@
 @property (nonatomic, assign) CGRect sourceLabelF;
 /** 正文 */
 @property (nonatomic, assign) CGRect contentLabelF;
+
+/** 转发微博整体 */
+@property (nonatomic, assign) CGRect retweetViewF;
+/** 转发微博正文 + 昵称 */
+@property (nonatomic, assign) CGRect retweetContentLabelF;
+/** 转发配图 */
+@property (nonatomic, assign) CGRect retweetPhotoViewF;
 
 /** cell的高度 */
 @property (nonatomic, assign) CGFloat cellHeight;

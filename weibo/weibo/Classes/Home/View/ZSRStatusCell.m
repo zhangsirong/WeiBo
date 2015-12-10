@@ -10,6 +10,7 @@
 #import "ZSRStatus.h"
 #import "ZSRUser.h"
 #import "ZSRStatusFrame.h"
+#import "ZSRPhoto.h"
 #import "UIImageView+WebCache.h"
 
 @interface ZSRStatusCell()
@@ -132,9 +133,13 @@
 
     
     /** 配图 */
-    self.photoView.frame = statusFrame.photoViewF;
-    self.photoView.backgroundColor = [UIColor redColor];
-    
+    if (status.pic_urls.count) {
+        self.photoView.frame = statusFrame.photoViewF;
+        ZSRPhoto *photo = [status.pic_urls lastObject];
+        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+        
+
+    }
     /** 昵称 */
     self.nameLabel.text = user.name;
     self.nameLabel.frame = statusFrame.nameLabelF;
