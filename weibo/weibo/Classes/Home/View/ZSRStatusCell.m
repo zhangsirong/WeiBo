@@ -11,6 +11,7 @@
 #import "ZSRUser.h"
 #import "ZSRStatusFrame.h"
 #import "ZSRPhoto.h"
+#import "ZSRStatusToolbar.h"
 #import "UIImageView+WebCache.h"
 
 @interface ZSRStatusCell()
@@ -30,7 +31,7 @@
 /** 来源 */
 @property (nonatomic, weak) UILabel *sourceLabel;
 /** 正文 */
-@property (nonatomic, weak) UILabel *contentLabel;\
+@property (nonatomic, weak) UILabel *contentLabel;
 
 /* 转发微博 */
 /** 转发微博整体 */
@@ -40,6 +41,8 @@
 /** 转发配图 */
 @property (nonatomic, weak) UIImageView *retweetPhotoView;
 
+/** 工具条 */
+@property (nonatomic, weak) ZSRStatusToolbar *toolbar;
 @end
 
 @implementation ZSRStatusCell
@@ -62,11 +65,26 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+//        self.backgroundColor = [UIColor clearColor];
+        // 点击cell的时候不要变色
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        // 设置选中时的背景为蓝色
+        //    UIView *bg = [[UIView alloc] init];
+        //    bg.backgroundColor = [UIColor blueColor];
+        //    self.selectedBackgroundView = bg;
+        
+        // 这个做法不行
+        //        self.selectedBackgroundView.backgroundColor = [UIColor blueColor];
+        
         // 初始化原创微博
         [self setupOriginal];
         
         // 初始化转发微博
         [self setupRetweet];
+        
+        // 初始化工具条
+        [self setupToolbar];
     }
     return self;
 }
@@ -145,6 +163,16 @@
     UIImageView *retweetPhotoView = [[UIImageView alloc] init];
     [retweetView addSubview:retweetPhotoView];
     self.retweetPhotoView = retweetPhotoView;
+}
+
+/**
+ * 初始化工具条
+ */
+- (void)setupToolbar
+{
+    ZSRStatusToolbar *toolbar = [ZSRStatusToolbar toolbar];
+    [self.contentView addSubview:toolbar];
+    self.toolbar = toolbar;
 }
 
 
@@ -228,7 +256,9 @@
     } else {
         self.retweetView.hidden = YES;
     }
-
+    /** 工具条 */
+    self.toolbar.frame = statusFrame.toolbarF;
+    self.toolbar.status = status;
 }
 
 

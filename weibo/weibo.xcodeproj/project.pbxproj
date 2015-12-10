@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */; };
 		E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48341C16E7B20077EBE7 /* ZSRUser.m */; };
 		E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48371C16E8210077EBE7 /* ZSRStatus.m */; };
 		E61B48511C16F6CB0077EBE7 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B483B1C16F6CB0077EBE7 /* MJDictionaryCache.m */; };
@@ -104,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusToolbar.h; sourceTree = "<group>"; };
+		E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusToolbar.m; sourceTree = "<group>"; };
 		E61B48331C16E7B20077EBE7 /* ZSRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRUser.h; sourceTree = "<group>"; };
 		E61B48341C16E7B20077EBE7 /* ZSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRUser.m; sourceTree = "<group>"; };
 		E61B48361C16E8210077EBE7 /* ZSRStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatus.h; sourceTree = "<group>"; };
@@ -408,6 +411,8 @@
 				E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */,
 				E63F3E3A1C1860AB000DF621 /* ZSRStatusCell.h */,
 				E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */,
+				E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */,
+				E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -898,6 +903,7 @@
 				E6629B5D1C12B6FE008E1A61 /* ZSROAuthViewController.m in Sources */,
 				E64AC4B81C0996F8007C6713 /* ZSRTest3ViewController.m in Sources */,
 				E64AC4AD1C0996F8007C6713 /* UIView+Extension.m in Sources */,
+				E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */,
 				E6CBB0291C15D925009D5F1B /* SDWebImageCompat.m in Sources */,
 				E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */,
 				E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */,
