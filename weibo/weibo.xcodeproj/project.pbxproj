@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */; };
+		E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */; };
 		E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48341C16E7B20077EBE7 /* ZSRUser.m */; };
 		E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48371C16E8210077EBE7 /* ZSRStatus.m */; };
 		E61B48511C16F6CB0077EBE7 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B483B1C16F6CB0077EBE7 /* MJDictionaryCache.m */; };
@@ -107,6 +108,8 @@
 /* Begin PBXFileReference section */
 		E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusToolbar.h; sourceTree = "<group>"; };
 		E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusToolbar.m; sourceTree = "<group>"; };
+		E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E61B48331C16E7B20077EBE7 /* ZSRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRUser.h; sourceTree = "<group>"; };
 		E61B48341C16E7B20077EBE7 /* ZSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRUser.m; sourceTree = "<group>"; };
 		E61B48361C16E8210077EBE7 /* ZSRStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatus.h; sourceTree = "<group>"; };
@@ -440,6 +443,8 @@
 				E64AC4851C0996F8007C6713 /* UIView+Extension.m */,
 				E6CBAFFC1C15BC1A009D5F1B /* UIWindow+Extension.h */,
 				E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */,
+				E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */,
+				E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -954,6 +959,7 @@
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
 				E64ABC221C148988000C733A /* ZSRAccount.m in Sources */,
+				E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */,
 				E6629BD01C12C82C008E1A61 /* AFURLRequestSerialization.m in Sources */,
 				E64AC4B21C0996F8007C6713 /* ZSRMessageCenterViewController.m in Sources */,
 				E6CBB02B1C15D925009D5F1B /* SDWebImageDownloader.m in Sources */,
