@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    ZSRUserVerifiedTypeNone = -1, // 没有任何认证
+    
+    ZSRUserVerifiedPersonal = 0,  // 个人认证
+    
+    ZSRUserVerifiedOrgEnterprice = 2, // 企业官方：CSDN、EOE、搜狐新闻客户端
+    ZSRUserVerifiedOrgMedia = 3, // 媒体官方：程序员杂志、苹果汇
+    ZSRUserVerifiedOrgWebsite = 5, // 网站官方：猫扑
+    
+    ZSRUserVerifiedDaren = 220 // 微博达人
+} ZSRUserVerifiedType;
+
 @interface ZSRUser : NSObject
 /**	string	字符串型的用户UID*/
 @property (nonatomic, copy) NSString *idstr;
@@ -23,5 +35,6 @@
 /** 会员等级 */
 @property (nonatomic, assign) int mbrank;
 @property (nonatomic, assign, getter = isVip) BOOL vip;
-
+/** 认证类型 */
+@property (nonatomic, assign) ZSRUserVerifiedType verified_type;
 @end

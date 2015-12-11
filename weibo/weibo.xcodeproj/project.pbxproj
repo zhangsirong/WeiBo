@@ -84,6 +84,7 @@
 		E6CBB0351C15D925009D5F1B /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBB0251C15D925009D5F1B /* UIView+WebCacheOperation.m */; };
 		E6EECDB31C1AECEC004F6FB6 /* ZSRStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */; };
 		E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */; };
+		E6EECDB91C1B080F004F6FB6 /* ZSRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB81C1B080F004F6FB6 /* ZSRIconView.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -259,6 +260,8 @@
 		E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusPhotosView.m; sourceTree = "<group>"; };
 		E6EECDB41C1AED26004F6FB6 /* ZSRStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusPhotoView.h; sourceTree = "<group>"; };
 		E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusPhotoView.m; sourceTree = "<group>"; };
+		E6EECDB71C1B080F004F6FB6 /* ZSRIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRIconView.h; sourceTree = "<group>"; };
+		E6EECDB81C1B080F004F6FB6 /* ZSRIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRIconView.m; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -664,6 +667,8 @@
 				E6B6C3A31C106DDF003B7903 /* ZSRDropdownMenu.m */,
 				E6B6C3AB1C1089EC003B7903 /* ZSRTabBar.h */,
 				E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */,
+				E6EECDB71C1B080F004F6FB6 /* ZSRIconView.h */,
+				E6EECDB81C1B080F004F6FB6 /* ZSRIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -979,6 +984,7 @@
 				E6CBB0301C15D925009D5F1B /* UIImage+GIF.m in Sources */,
 				E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */,
 				E6CBB0281C15D925009D5F1B /* SDImageCache.m in Sources */,
+				E6EECDB91C1B080F004F6FB6 /* ZSRIconView.m in Sources */,
 				E6CBB0271C15D925009D5F1B /* NSData+ImageContentType.m in Sources */,
 				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
 				E6CBB02E1C15D925009D5F1B /* SDWebImagePrefetcher.m in Sources */,

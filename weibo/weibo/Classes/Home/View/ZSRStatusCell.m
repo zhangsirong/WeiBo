@@ -12,15 +12,16 @@
 #import "ZSRStatusFrame.h"
 #import "ZSRPhoto.h"
 #import "ZSRStatusToolbar.h"
-#import "UIImageView+WebCache.h"
+#import "ZSRIconView.h"
 #import "ZSRStatusPhotosView.h"
+#import "UIImageView+WebCache.h"
 
 @interface ZSRStatusCell()
 /* 原创微博 */
 /** 原创微博整体 */
 @property (nonatomic, weak) UIView *originalView;
 /** 头像 */
-@property (nonatomic, weak) UIImageView *iconView;
+@property (nonatomic, weak) ZSRIconView *iconView;
 /** 会员图标 */
 @property (nonatomic, weak) UIImageView *vipView;
 /** 配图 */
@@ -102,7 +103,7 @@
     self.originalView = originalView;
     
     /** 头像 */
-    UIImageView *iconView = [[UIImageView alloc] init];
+    ZSRIconView *iconView = [[ZSRIconView alloc] init];
     [originalView addSubview:iconView];
     self.iconView = iconView;
     
@@ -190,7 +191,7 @@
     
     /** 头像 */
     self.iconView.frame = statusFrame.iconViewF;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    self.iconView.user = user;
     
     /** 会员图标 */
     if (user.isVip) {
