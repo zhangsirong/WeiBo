@@ -82,6 +82,8 @@
 		E6CBB0331C15D925009D5F1B /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBB0211C15D925009D5F1B /* UIImageView+HighlightedWebCache.m */; };
 		E6CBB0341C15D925009D5F1B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBB0231C15D925009D5F1B /* UIImageView+WebCache.m */; };
 		E6CBB0351C15D925009D5F1B /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBB0251C15D925009D5F1B /* UIView+WebCacheOperation.m */; };
+		E6EECDB31C1AECEC004F6FB6 /* ZSRStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */; };
+		E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -253,6 +255,10 @@
 		E6CBB0231C15D925009D5F1B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		E6CBB0241C15D925009D5F1B /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		E6CBB0251C15D925009D5F1B /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		E6EECDB11C1AECEC004F6FB6 /* ZSRStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusPhotosView.h; sourceTree = "<group>"; };
+		E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusPhotosView.m; sourceTree = "<group>"; };
+		E6EECDB41C1AED26004F6FB6 /* ZSRStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusPhotoView.h; sourceTree = "<group>"; };
+		E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusPhotoView.m; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -416,6 +422,10 @@
 				E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */,
 				E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */,
 				E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */,
+				E6EECDB11C1AECEC004F6FB6 /* ZSRStatusPhotosView.h */,
+				E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */,
+				E6EECDB41C1AED26004F6FB6 /* ZSRStatusPhotoView.h */,
+				E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -937,10 +947,12 @@
 				E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */,
 				E6CBB0261C15D925009D5F1B /* MKAnnotationView+WebCache.m in Sources */,
 				E64AC4AF1C0996F8007C6713 /* ZSRTabBarViewController.m in Sources */,
+				E6EECDB31C1AECEC004F6FB6 /* ZSRStatusPhotosView.m in Sources */,
 				E6629BCB1C12C82C008E1A61 /* AFHTTPRequestOperationManager.m in Sources */,
 				E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */,
 				E6CBB0331C15D925009D5F1B /* UIImageView+HighlightedWebCache.m in Sources */,
 				E61B48561C16F6CB0077EBE7 /* MJPropertyType.m in Sources */,
+				E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */,
 				E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */,
 				E61B48571C16F6CB0077EBE7 /* NSObject+MJClass.m in Sources */,
 				E6629BCA1C12C82C008E1A61 /* AFHTTPRequestOperation.m in Sources */,

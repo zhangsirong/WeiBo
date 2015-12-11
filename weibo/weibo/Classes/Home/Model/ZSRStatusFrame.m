@@ -6,6 +6,7 @@
 //  Copyright © 2015年 hp. All rights reserved.
 //
 
+#import "ZSRStatusPhotosView.h"
 #import "ZSRStatusFrame.h"
 #import "ZSRStatus.h"
 #import "ZSRUser.h"
@@ -82,12 +83,13 @@
     /** 配图 */
     CGFloat originalH = 0;
     if (status.pic_urls.count) {// 有配图
-        CGFloat photoWH = 130;
-        CGFloat photoX = contentX;
-        CGFloat photoY = CGRectGetMaxY(self.contentLabelF) + ZSRStatusCellBorderW;
-        self.photoViewF = CGRectMake(photoX, photoY, photoWH, photoWH);
+        CGFloat photosX = contentX;
+        CGFloat photosY = CGRectGetMaxY(self.contentLabelF) + ZSRStatusCellBorderW;
+        CGSize photosSize = [ZSRStatusPhotosView sizeWithCount:status.pic_urls.count];
+
+        self.photosViewF = (CGRect) {{photosX,photosY},photosSize};
         
-        originalH = CGRectGetMaxY(self.photoViewF) + ZSRStatusCellBorderW;
+        originalH = CGRectGetMaxY(self.photosViewF) + ZSRStatusCellBorderW;
     }else{
         originalH = CGRectGetMaxY(self.contentLabelF) + ZSRStatusCellBorderW;
 
@@ -114,10 +116,10 @@
         /** 被转发微博配图 */
         CGFloat retweetH = 0;
         if (retweeted_status.pic_urls.count) { // 转发微博有配图
-            CGFloat retweetPhotoWH = 130;
-            CGFloat retweetPhotoX = retweetContentX;
-            CGFloat retweetPhotoY = CGRectGetMaxY(self.retweetContentLabelF) + ZSRStatusCellBorderW;
-            self.retweetPhotoViewF = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
+            CGFloat retweetPhotosX = retweetContentX;
+            CGFloat retweetPhotosY = CGRectGetMaxY(self.retweetContentLabelF) + ZSRStatusCellBorderW;
+            CGSize retweetPhotosSize = [ZSRStatusPhotosView sizeWithCount:retweeted_status.pic_urls.count];
+            self.retweetPhotoViewF = (CGRect){{retweetPhotosX, retweetPhotosY}, retweetPhotosSize};
             
             retweetH = CGRectGetMaxY(self.retweetPhotoViewF) + ZSRStatusCellBorderW;
         } else { // 转发微博没有配图

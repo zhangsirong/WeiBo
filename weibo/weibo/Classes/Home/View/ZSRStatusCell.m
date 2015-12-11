@@ -13,6 +13,7 @@
 #import "ZSRPhoto.h"
 #import "ZSRStatusToolbar.h"
 #import "UIImageView+WebCache.h"
+#import "ZSRStatusPhotosView.h"
 
 @interface ZSRStatusCell()
 /* 原创微博 */
@@ -23,7 +24,7 @@
 /** 会员图标 */
 @property (nonatomic, weak) UIImageView *vipView;
 /** 配图 */
-@property (nonatomic, weak) UIImageView *photoView;
+@property (nonatomic, weak) ZSRStatusPhotosView *photosView;
 /** 昵称 */
 @property (nonatomic, weak) UILabel *nameLabel;
 /** 时间 */
@@ -43,6 +44,7 @@
 
 /** 工具条 */
 @property (nonatomic, weak) ZSRStatusToolbar *toolbar;
+
 @end
 
 @implementation ZSRStatusCell
@@ -111,9 +113,9 @@
     self.vipView = vipView;
     
     /** 配图 */
-    UIImageView *photoView = [[UIImageView alloc] init];
-    [originalView addSubview:photoView];
-    self.photoView = photoView;
+    ZSRStatusPhotosView *photosView = [[ZSRStatusPhotosView alloc] init];
+    [originalView addSubview:photosView];
+    self.photosView = photosView;
     
     /** 昵称 */
     UILabel *nameLabel = [[UILabel alloc] init];
@@ -207,11 +209,11 @@
     
     /** 配图 */
     if (status.pic_urls.count) {
-        self.photoView.frame = statusFrame.photoViewF;
-        ZSRPhoto *photo = [status.pic_urls lastObject];
-        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-        
-
+        self.photosView.frame = statusFrame.photosViewF;
+        self.photosView.photos = status.pic_urls;
+        self.photosView.hidden = NO;
+    } else {
+        self.photosView.hidden = YES;
     }
     /** 昵称 */
     self.nameLabel.text = user.name;
