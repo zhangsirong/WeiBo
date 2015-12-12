@@ -14,5 +14,5 @@
 /**
  *  根据图片个数计算相册的尺寸
  */
-+ (CGSize)sizeWithCount:(int)count;
++ (CGSize)sizeWithCount:(NSUInteger)count;
 @end

@@ -56,6 +56,7 @@
 		E6629BD31C12C82C008E1A61 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E6629BC61C12C82C008E1A61 /* MBProgressHUD+MJ.m */; };
 		E6629BD41C12C82C008E1A61 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6629BC71C12C82C008E1A61 /* MBProgressHUD.bundle */; };
 		E6629BD51C12C82C008E1A61 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E6629BC91C12C82C008E1A61 /* MBProgressHUD.m */; };
+		E66805A31C1C521900B79C57 /* ZSRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E66805A21C1C521900B79C57 /* ZSRTextView.m */; };
 		E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E66FD8C31C19AE350095E461 /* ZSRPhoto.m */; };
 		E6836A6F1C11C45100BFD103 /* ZSRNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */; };
 		E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A01C105906003B7903 /* ZSRSearchBar.m */; };
@@ -85,6 +86,7 @@
 		E6EECDB31C1AECEC004F6FB6 /* ZSRStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */; };
 		E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */; };
 		E6EECDB91C1B080F004F6FB6 /* ZSRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDB81C1B080F004F6FB6 /* ZSRIconView.m */; };
+		E6EECDBF1C1B1558004F6FB6 /* ZSRComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EECDBE1C1B1558004F6FB6 /* ZSRComposeViewController.m */; };
 		E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */; };
 		E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4BC1F1C088A8500C30E47 /* LaunchScreen.storyboard */; };
 		E6F4BC2C1C088A8500C30E47 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4BC2B1C088A8500C30E47 /* weiboTests.m */; };
@@ -204,6 +206,8 @@
 		E6629BC81C12C82C008E1A61 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		E6629BC91C12C82C008E1A61 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E66724F41C08933F0070FCAD /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
+		E66805A11C1C521900B79C57 /* ZSRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTextView.h; sourceTree = "<group>"; };
+		E66805A21C1C521900B79C57 /* ZSRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTextView.m; sourceTree = "<group>"; };
 		E66FD8C21C19AE350095E461 /* ZSRPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRPhoto.h; sourceTree = "<group>"; };
 		E66FD8C31C19AE350095E461 /* ZSRPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRPhoto.m; sourceTree = "<group>"; };
 		E6836A6D1C11C45100BFD103 /* ZSRNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRNewfeatureViewController.h; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 		E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusPhotoView.m; sourceTree = "<group>"; };
 		E6EECDB71C1B080F004F6FB6 /* ZSRIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRIconView.h; sourceTree = "<group>"; };
 		E6EECDB81C1B080F004F6FB6 /* ZSRIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRIconView.m; sourceTree = "<group>"; };
+		E6EECDBD1C1B1558004F6FB6 /* ZSRComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRComposeViewController.h; sourceTree = "<group>"; };
+		E6EECDBE1C1B1558004F6FB6 /* ZSRComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRComposeViewController.m; sourceTree = "<group>"; };
 		E6F4BC0E1C088A8500C30E47 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F4BC201C088A8500C30E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -332,6 +338,7 @@
 		E64AC4751C0996F8007C6713 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E6EECDBA1C1B151B004F6FB6 /* Compose */,
 				E6629B591C12B6DA008E1A61 /* OAuth */,
 				E6836A6C1C11B54700BFD103 /* Newfeature */,
 				E64AC4761C0996F8007C6713 /* Discover */,
@@ -669,6 +676,8 @@
 				E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */,
 				E6EECDB71C1B080F004F6FB6 /* ZSRIconView.h */,
 				E6EECDB81C1B080F004F6FB6 /* ZSRIconView.m */,
+				E66805A11C1C521900B79C57 /* ZSRTextView.h */,
+				E66805A21C1C521900B79C57 /* ZSRTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -720,6 +729,31 @@
 				E6CBB0251C15D925009D5F1B /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		E6EECDBA1C1B151B004F6FB6 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				E6EECDBB1C1B151B004F6FB6 /* Controller */,
+				E6EECDBC1C1B151B004F6FB6 /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		E6EECDBB1C1B151B004F6FB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6EECDBD1C1B1558004F6FB6 /* ZSRComposeViewController.h */,
+				E6EECDBE1C1B1558004F6FB6 /* ZSRComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E6EECDBC1C1B151B004F6FB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E6F4BC051C088A8400C30E47 = {
@@ -961,6 +995,7 @@
 				E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */,
 				E61B48571C16F6CB0077EBE7 /* NSObject+MJClass.m in Sources */,
 				E6629BCA1C12C82C008E1A61 /* AFHTTPRequestOperation.m in Sources */,
+				E66805A31C1C521900B79C57 /* ZSRTextView.m in Sources */,
 				E6629BD21C12C82C008E1A61 /* AFURLSessionManager.m in Sources */,
 				E61B485A1C16F6CB0077EBE7 /* NSObject+MJProperty.m in Sources */,
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
@@ -975,6 +1010,7 @@
 				E6CBB0351C15D925009D5F1B /* UIView+WebCacheOperation.m in Sources */,
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
+				E6EECDBF1C1B1558004F6FB6 /* ZSRComposeViewController.m in Sources */,
 				E64ABC221C148988000C733A /* ZSRAccount.m in Sources */,
 				E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */,
 				E6629BD01C12C82C008E1A61 /* AFURLRequestSerialization.m in Sources */,
@@ -1128,6 +1164,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.MYweibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1142,6 +1179,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.MYweibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

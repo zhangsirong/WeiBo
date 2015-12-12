@@ -13,6 +13,7 @@
 #import "ZSRProfileViewController.h"
 #import "ZSRNavigationController.h"
 #import "ZSRTabBar.h"
+#import "ZSRComposeViewController.h"
 
 @interface ZSRTabBarViewController ()<ZSRTabBarDelegate>
 
@@ -93,8 +94,9 @@
 #pragma mark - HWTabBarDelegate代理方法
 - (void)tabBarDidClickPlusButton:(ZSRTabBar *)tabBar
 {
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    [self presentViewController:vc animated:YES completion:nil];
+    ZSRComposeViewController *vc =[[ZSRComposeViewController alloc] init];
+    ZSRNavigationController *nvc = [[ZSRNavigationController alloc] initWithRootViewController:vc];
+
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 @end

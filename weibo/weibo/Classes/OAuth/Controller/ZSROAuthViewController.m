@@ -106,7 +106,7 @@
     // 2.拼接请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"client_id"] = @"3615446451";
-    params[@"client_secret"] = @"6178adec639fa41e735db5568c3d3fad";
+    params[@"client_secret"] = @"ceea8a46ccf52021258cae04e97760d3";//6178adec639fa41e735db5568c3d3fad
     params[@"grant_type"] = @"authorization_code";
     params[@"redirect_uri"] = @"https://www.baidu.com";
     params[@"code"] = code;

@@ -19,7 +19,7 @@
 {
     _photos = photos;
     
-    int photosCount = photos.count;
+    NSUInteger photosCount = photos.count;
     
     
     // 创建足够数量的图片控件
@@ -47,7 +47,7 @@
     [super layoutSubviews];
     
     // 设置图片的尺寸和位置
-    int photosCount = self.photos.count;
+    NSUInteger photosCount = self.photos.count;
     int maxCol = ZSRStatusPhotoMaxCol(photosCount);
     for (int i = 0; i<photosCount; i++) {
         ZSRStatusPhotoView *photoView = self.subviews[i];
@@ -62,17 +62,17 @@
     }
 }
 
-+ (CGSize)sizeWithCount:(int)count
++ (CGSize)sizeWithCount:(NSUInteger)count
 {
     // 最大列数（一行最多有多少列）
     int maxCols = ZSRStatusPhotoMaxCol(count);
     
     ///列数
-    int cols = (count >= maxCols)? maxCols : count;
+    NSUInteger cols = (count >= maxCols)? maxCols : count;
     CGFloat photosW = cols * ZSRStatusPhotoWH + (cols - 1) * ZSRStatusPhotoMargin;
     
     // 行数
-    int rows = (count + maxCols - 1) / maxCols;
+    NSUInteger rows = (count + maxCols - 1) / maxCols;
     CGFloat photosH = rows * ZSRStatusPhotoWH + (rows - 1) * ZSRStatusPhotoMargin;
     
     return CGSizeMake(photosW, photosH);
