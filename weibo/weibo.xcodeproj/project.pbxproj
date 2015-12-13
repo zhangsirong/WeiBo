@@ -57,6 +57,8 @@
 		E6629BD41C12C82C008E1A61 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6629BC71C12C82C008E1A61 /* MBProgressHUD.bundle */; };
 		E6629BD51C12C82C008E1A61 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E6629BC91C12C82C008E1A61 /* MBProgressHUD.m */; };
 		E66805A31C1C521900B79C57 /* ZSRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E66805A21C1C521900B79C57 /* ZSRTextView.m */; };
+		E66805A61C1C751D00B79C57 /* ZSRComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E66805A51C1C751D00B79C57 /* ZSRComposeToolbar.m */; };
+		E66CF9B01C1D13D600ABBAC3 /* ZSRComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = E66CF9AF1C1D13D600ABBAC3 /* ZSRComposePhotosView.m */; };
 		E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E66FD8C31C19AE350095E461 /* ZSRPhoto.m */; };
 		E6836A6F1C11C45100BFD103 /* ZSRNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */; };
 		E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A01C105906003B7903 /* ZSRSearchBar.m */; };
@@ -208,6 +210,10 @@
 		E66724F41C08933F0070FCAD /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
 		E66805A11C1C521900B79C57 /* ZSRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTextView.h; sourceTree = "<group>"; };
 		E66805A21C1C521900B79C57 /* ZSRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTextView.m; sourceTree = "<group>"; };
+		E66805A41C1C751D00B79C57 /* ZSRComposeToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRComposeToolbar.h; sourceTree = "<group>"; };
+		E66805A51C1C751D00B79C57 /* ZSRComposeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRComposeToolbar.m; sourceTree = "<group>"; };
+		E66CF9AE1C1D13D600ABBAC3 /* ZSRComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRComposePhotosView.h; sourceTree = "<group>"; };
+		E66CF9AF1C1D13D600ABBAC3 /* ZSRComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRComposePhotosView.m; sourceTree = "<group>"; };
 		E66FD8C21C19AE350095E461 /* ZSRPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRPhoto.h; sourceTree = "<group>"; };
 		E66FD8C31C19AE350095E461 /* ZSRPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRPhoto.m; sourceTree = "<group>"; };
 		E6836A6D1C11C45100BFD103 /* ZSRNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRNewfeatureViewController.h; sourceTree = "<group>"; };
@@ -752,6 +758,10 @@
 		E6EECDBC1C1B151B004F6FB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E66805A41C1C751D00B79C57 /* ZSRComposeToolbar.h */,
+				E66805A51C1C751D00B79C57 /* ZSRComposeToolbar.m */,
+				E66CF9AE1C1D13D600ABBAC3 /* ZSRComposePhotosView.h */,
+				E66CF9AF1C1D13D600ABBAC3 /* ZSRComposePhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -974,6 +984,7 @@
 				E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */,
 				E61B48531C16F6CB0077EBE7 /* MJFoundation.m in Sources */,
 				E6CBB02A1C15D925009D5F1B /* SDWebImageDecoder.m in Sources */,
+				E66805A61C1C751D00B79C57 /* ZSRComposeToolbar.m in Sources */,
 				E6629BCC1C12C82C008E1A61 /* AFHTTPSessionManager.m in Sources */,
 				E61B48601C17164F0077EBE7 /* ZSRLoadMoreFooter.m in Sources */,
 				E64AC4B31C0996F8007C6713 /* ZSRProfileViewController.m in Sources */,
@@ -1025,6 +1036,7 @@
 				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
 				E6CBB02E1C15D925009D5F1B /* SDWebImagePrefetcher.m in Sources */,
 				E6CBB0311C15D925009D5F1B /* UIImage+MultiFormat.m in Sources */,
+				E66CF9B01C1D13D600ABBAC3 /* ZSRComposePhotosView.m in Sources */,
 				E6836A6F1C11C45100BFD103 /* ZSRNewfeatureViewController.m in Sources */,
 				E64AC4AE1C0996F8007C6713 /* ZSRNavigationController.m in Sources */,
 			);
