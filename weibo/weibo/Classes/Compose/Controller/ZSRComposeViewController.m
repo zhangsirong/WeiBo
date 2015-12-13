@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import "ZSRComposeToolbar.h"
 #import "ZSRComposePhotosView.h"
+#import "ZSREmotionKeyboard.h"
 
 @interface ZSRComposeViewController ()<UITextViewDelegate, ZSRComposeToolbarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /** 输入控件 */
@@ -23,6 +24,8 @@
 @property (nonatomic, weak) ZSRComposePhotosView *photosView;
 //@property (nonatomic, assign) BOOL  picking;
 
+/** 是否正在切换键盘 */
+@property (nonatomic, assign) BOOL switchingKeybaord;
 @end
 
 @implementation ZSRComposeViewController
@@ -201,6 +204,8 @@
      }
      */
 //    ZSRLog(@"%@",notification);
+    // 如果正在切换键盘，就不要执行后面的代码
+//    if (self.switchingKeybaord) return;
     NSDictionary *userInfo = notification.userInfo;
     // 动画的持续时间
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -327,12 +332,44 @@
             break;
             
         case ZSRComposeToolbarButtonTypeEmotion: // 表情\键盘
-            ZSRLog(@"--- 表情");
+             [self switchKeyboard];
             break;
     }
 }
 
 #pragma mark - 其他方法
+/**
+ *  切换键盘
+ */
+- (void)switchKeyboard
+{
+    // self.textView.inputView == nil : 使用的是系统自带的键盘
+    if (self.textView.inputView == nil) { // 切换为自定义的表情键盘
+        ZSREmotionKeyboard *emotionKeyboard = [[ZSREmotionKeyboard alloc] init];
+        emotionKeyboard.width = self.view.width;
+        emotionKeyboard.height = 216;
+        self.textView.inputView = emotionKeyboard;
+    } else { // 切换为系统自带的键盘
+        self.textView.inputView = nil;
+    }
+    
+    // 开始切换键盘
+    self.switchingKeybaord = YES;
+    
+    // 退出键盘
+    [self.textView endEditing:YES];
+    //    [self.view endEditing:YES];
+    //    [self.view.window endEditing:YES];
+    //    [self.textView resignFirstResponder];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 弹出键盘
+        [self.textView becomeFirstResponder];
+        
+        // 结束切换键盘
+        self.switchingKeybaord = NO;
+    });
+}
 - (void)openCamera
 {
     [self openImagePickerController:UIImagePickerControllerSourceTypeCamera];

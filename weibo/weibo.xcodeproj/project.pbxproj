@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */; };
 		E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */; };
+		E61169A11C1DA6D5002A457D /* ZSREmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61169A01C1DA6D5002A457D /* ZSREmotionListView.m */; };
+		E61169A41C1DA6F0002A457D /* ZSREmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E61169A31C1DA6F0002A457D /* ZSREmotionKeyboard.m */; };
+		E61169A71C1DA711002A457D /* ZSREmotionTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E61169A61C1DA711002A457D /* ZSREmotionTabBar.m */; };
 		E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48341C16E7B20077EBE7 /* ZSRUser.m */; };
 		E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B48371C16E8210077EBE7 /* ZSRStatus.m */; };
 		E61B48511C16F6CB0077EBE7 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B483B1C16F6CB0077EBE7 /* MJDictionaryCache.m */; };
@@ -117,6 +120,12 @@
 		E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusToolbar.m; sourceTree = "<group>"; };
 		E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		E611699F1C1DA6D5002A457D /* ZSREmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionListView.h; sourceTree = "<group>"; };
+		E61169A01C1DA6D5002A457D /* ZSREmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionListView.m; sourceTree = "<group>"; };
+		E61169A21C1DA6F0002A457D /* ZSREmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionKeyboard.h; sourceTree = "<group>"; };
+		E61169A31C1DA6F0002A457D /* ZSREmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionKeyboard.m; sourceTree = "<group>"; };
+		E61169A51C1DA711002A457D /* ZSREmotionTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionTabBar.h; sourceTree = "<group>"; };
+		E61169A61C1DA711002A457D /* ZSREmotionTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTabBar.m; sourceTree = "<group>"; };
 		E61B48331C16E7B20077EBE7 /* ZSRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRUser.h; sourceTree = "<group>"; };
 		E61B48341C16E7B20077EBE7 /* ZSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRUser.m; sourceTree = "<group>"; };
 		E61B48361C16E8210077EBE7 /* ZSRStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatus.h; sourceTree = "<group>"; };
@@ -762,6 +771,12 @@
 				E66805A51C1C751D00B79C57 /* ZSRComposeToolbar.m */,
 				E66CF9AE1C1D13D600ABBAC3 /* ZSRComposePhotosView.h */,
 				E66CF9AF1C1D13D600ABBAC3 /* ZSRComposePhotosView.m */,
+				E61169A21C1DA6F0002A457D /* ZSREmotionKeyboard.h */,
+				E61169A31C1DA6F0002A457D /* ZSREmotionKeyboard.m */,
+				E611699F1C1DA6D5002A457D /* ZSREmotionListView.h */,
+				E61169A01C1DA6D5002A457D /* ZSREmotionListView.m */,
+				E61169A51C1DA711002A457D /* ZSREmotionTabBar.h */,
+				E61169A61C1DA711002A457D /* ZSREmotionTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1010,6 +1025,7 @@
 				E6629BD21C12C82C008E1A61 /* AFURLSessionManager.m in Sources */,
 				E61B485A1C16F6CB0077EBE7 /* NSObject+MJProperty.m in Sources */,
 				E64AC4B11C0996F8007C6713 /* main.m in Sources */,
+				E61169A11C1DA6D5002A457D /* ZSREmotionListView.m in Sources */,
 				E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */,
 				E6CBB0341C15D925009D5F1B /* UIImageView+WebCache.m in Sources */,
 				E61B48381C16E8210077EBE7 /* ZSRStatus.m in Sources */,
@@ -1028,9 +1044,11 @@
 				E64AC4B21C0996F8007C6713 /* ZSRMessageCenterViewController.m in Sources */,
 				E6CBB02B1C15D925009D5F1B /* SDWebImageDownloader.m in Sources */,
 				E6B6C3AA1C10754F003B7903 /* ZSRTitleMenuViewController.m in Sources */,
+				E61169A71C1DA711002A457D /* ZSREmotionTabBar.m in Sources */,
 				E6CBB0301C15D925009D5F1B /* UIImage+GIF.m in Sources */,
 				E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */,
 				E6CBB0281C15D925009D5F1B /* SDImageCache.m in Sources */,
+				E61169A41C1DA6F0002A457D /* ZSREmotionKeyboard.m in Sources */,
 				E6EECDB91C1B080F004F6FB6 /* ZSRIconView.m in Sources */,
 				E6CBB0271C15D925009D5F1B /* NSData+ImageContentType.m in Sources */,
 				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
