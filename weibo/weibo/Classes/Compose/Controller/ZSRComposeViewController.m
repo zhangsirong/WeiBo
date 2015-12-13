@@ -23,12 +23,25 @@
 /** 相册（存放拍照或者相册中选择的图片） */
 @property (nonatomic, weak) ZSRComposePhotosView *photosView;
 //@property (nonatomic, assign) BOOL  picking;
+#warning 一定要用strong
+/** 表情键盘 */
+@property (nonatomic, strong) ZSREmotionKeyboard *emotionKeyboard;
 
 /** 是否正在切换键盘 */
 @property (nonatomic, assign) BOOL switchingKeybaord;
 @end
 
 @implementation ZSRComposeViewController
+#pragma mark - 懒加载
+- (ZSREmotionKeyboard *)emotionKeyboard
+{
+    if (!_emotionKeyboard) {
+        self.emotionKeyboard = [[ZSREmotionKeyboard alloc] init];
+        self.emotionKeyboard.width = self.view.width;
+        self.emotionKeyboard.height = 216;
+    }
+    return _emotionKeyboard;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -345,12 +358,15 @@
 {
     // self.textView.inputView == nil : 使用的是系统自带的键盘
     if (self.textView.inputView == nil) { // 切换为自定义的表情键盘
-        ZSREmotionKeyboard *emotionKeyboard = [[ZSREmotionKeyboard alloc] init];
-        emotionKeyboard.width = self.view.width;
-        emotionKeyboard.height = 216;
-        self.textView.inputView = emotionKeyboard;
+        self.textView.inputView = self.emotionKeyboard;
+        
+        // 显示键盘按钮
+        self.toolbar.showKeyboardButton = YES;
     } else { // 切换为系统自带的键盘
         self.textView.inputView = nil;
+        
+        // 显示表情按钮
+        self.toolbar.showKeyboardButton = NO;
     }
     
     // 开始切换键盘

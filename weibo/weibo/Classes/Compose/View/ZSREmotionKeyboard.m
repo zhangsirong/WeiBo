@@ -10,7 +10,7 @@
 #import "ZSREmotionListView.h"
 #import "ZSREmotionTabBar.h"
 
-@interface ZSREmotionKeyboard ()
+@interface ZSREmotionKeyboard ()<ZSREmotionTabBarDelegate>
 /** 表情内容 */
 @property (nonatomic, weak) ZSREmotionListView *listView;
 /** tabbar */
@@ -31,6 +31,7 @@
         // 2.tabbar
         ZSREmotionTabBar *tabBar = [[ZSREmotionTabBar alloc] init];
         tabBar.backgroundColor = ZSRRandomColor;
+        tabBar.delegate = self;
         [self addSubview:tabBar];
         self.tabBar = tabBar;
     }
@@ -43,7 +44,7 @@
     
     // 1.tabbar
     self.tabBar.width = self.width;
-    self.tabBar.height = 44;
+    self.tabBar.height = 37;
     self.tabBar.x = 0;
     self.tabBar.y = self.height - self.tabBar.height;
     
@@ -52,4 +53,27 @@
     self.listView.width = self.width;
     self.listView.height = self.tabBar.y;
 }
+
+#pragma mark - ZSREmotionTabBarDelegate
+- (void)emotionTabBar:(ZSREmotionTabBar *)tabBar didSelectButton:(ZSREmotionTabBarButtonType)buttonType
+{
+    switch (buttonType) {
+        case ZSREmotionTabBarButtonTypeRecent: // 最近
+            ZSRLog(@"最近");
+            break;
+            
+        case ZSREmotionTabBarButtonTypeDefault: // 默认
+            ZSRLog(@"默认");
+            break;
+            
+        case ZSREmotionTabBarButtonTypeEmoji: // Emoji
+            ZSRLog(@"Emoji");
+            break;
+            
+        case ZSREmotionTabBarButtonTypeLxh: // Lxh
+            ZSRLog(@"Lxh");
+            break;
+    }
+}
+
 @end
