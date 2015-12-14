@@ -30,6 +30,8 @@
 		E625BF831C1DAF7B00B55868 /* ZSREmotionTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E625BF821C1DAF7B00B55868 /* ZSREmotionTabBarButton.m */; };
 		E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */; };
 		E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */; };
+		E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = E64094671C1F021D00DC1169 /* ZSREmotion.m */; };
+		E6409E161C1F0E1100DC1169 /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = E6409E151C1F0E1100DC1169 /* EmotionIcons */; };
 		E64ABC221C148988000C733A /* ZSRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E64ABC211C148988000C733A /* ZSRAccount.m */; };
 		E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC4791C0996F8007C6713 /* ZSRDiscoverViewController.m */; };
 		E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64AC47F1C0996F8007C6713 /* ZSRHomeViewController.m */; };
@@ -163,6 +165,9 @@
 		E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusCell.m; sourceTree = "<group>"; };
 		E63F3E3D1C18614A000DF621 /* ZSRStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusFrame.h; sourceTree = "<group>"; };
 		E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusFrame.m; sourceTree = "<group>"; };
+		E64094661C1F021D00DC1169 /* ZSREmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotion.h; sourceTree = "<group>"; };
+		E64094671C1F021D00DC1169 /* ZSREmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotion.m; sourceTree = "<group>"; };
+		E6409E151C1F0E1100DC1169 /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
 		E64ABC201C148988000C733A /* ZSRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccount.h; sourceTree = "<group>"; };
 		E64ABC211C148988000C733A /* ZSRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccount.m; sourceTree = "<group>"; };
 		E64AC4781C0996F8007C6713 /* ZSRDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRDiscoverViewController.h; sourceTree = "<group>"; };
@@ -351,6 +356,15 @@
 				E61B48501C16F6CB0077EBE7 /* NSString+MJExtension.m */,
 			);
 			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		E64094651C1F01F800DC1169 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E64094661C1F021D00DC1169 /* ZSREmotion.h */,
+				E64094671C1F021D00DC1169 /* ZSREmotion.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E64AC4751C0996F8007C6713 /* Classes */ = {
@@ -752,6 +766,7 @@
 		E6EECDBA1C1B151B004F6FB6 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				E64094651C1F01F800DC1169 /* Model */,
 				E6EECDBB1C1B151B004F6FB6 /* Controller */,
 				E6EECDBC1C1B151B004F6FB6 /* View */,
 			);
@@ -820,6 +835,7 @@
 		E6F4BC111C088A8500C30E47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6409E151C1F0E1100DC1169 /* EmotionIcons */,
 				E6F4BC1D1C088A8500C30E47 /* Assets.xcassets */,
 				E66724F41C08933F0070FCAD /* weibo.pch */,
 			);
@@ -954,6 +970,7 @@
 				E64AC4B51C0996F8007C6713 /* ZSRTest1ViewController.xib in Resources */,
 				E6F4BC211C088A8500C30E47 /* LaunchScreen.storyboard in Resources */,
 				E6F4BC1E1C088A8500C30E47 /* Assets.xcassets in Resources */,
+				E6409E161C1F0E1100DC1169 /* EmotionIcons in Resources */,
 				E64AC4B71C0996F8007C6713 /* ZSRTest2ViewController.xib in Resources */,
 				E61B48621C1716620077EBE7 /* ZSRLoadMoreFooter.xib in Resources */,
 				E64AC4B91C0996F8007C6713 /* ZSRTest3ViewController.xib in Resources */,
@@ -1021,6 +1038,7 @@
 				E6EECDB31C1AECEC004F6FB6 /* ZSRStatusPhotosView.m in Sources */,
 				E6629BCB1C12C82C008E1A61 /* AFHTTPRequestOperationManager.m in Sources */,
 				E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */,
+				E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */,
 				E6CBB0331C15D925009D5F1B /* UIImageView+HighlightedWebCache.m in Sources */,
 				E61B48561C16F6CB0077EBE7 /* MJPropertyType.m in Sources */,
 				E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */,
