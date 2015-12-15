@@ -1,5 +1,5 @@
 //
-//  ZSREmotionButton.h
+//  ZSREmotionPopView.h
 //  weibo
 //
 //  Created by hp on 15/12/15.
@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @class ZSREmotion;
-@interface ZSREmotionButton : UIButton
+@interface ZSREmotionPopView : UIView
++ (instancetype)popView;
+
 @property (nonatomic, strong) ZSREmotion *emotion;
 @end

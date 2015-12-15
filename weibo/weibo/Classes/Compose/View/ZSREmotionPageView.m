@@ -8,26 +8,39 @@
 
 #import "ZSREmotionPageView.h"
 #import "ZSREmotion.h"
+#import "ZSREmotionPopView.h"
+#import "ZSREmotionButton.h"
+
+@interface ZSREmotionPageView ()
+/** 点击表情后弹出的放大镜 */
+@property (nonatomic, strong) ZSREmotionPopView *popView;
+@end
+
+
 @implementation ZSREmotionPageView
+
+- (ZSREmotionPopView *)popView
+{
+    if (!_popView) {
+        self.popView = [ZSREmotionPopView popView];
+    }
+    return _popView;
+}
+
 - (void)setEmotions:(NSArray *)emotions
 {
     _emotions = emotions;
     
     NSUInteger count = emotions.count;
     for (int i = 0; i<count; i++) {
-        UIButton *btn = [[UIButton alloc] init];
-        ZSREmotion *emotion = emotions[i];
-//        btn.backgroundColor = ZSRRandomColor;
-        
-        if (emotion.png) { // 有图片
-            [btn setImage:[UIImage imageNamed:emotion.png] forState:UIControlStateNormal];
-        } else if (emotion.code) { // 是emoji表情
-            // 设置emoji
-            [btn setTitle:emotion.code.emoji forState:UIControlStateNormal];
-            btn.titleLabel.font = [UIFont systemFontOfSize:32];
-        }
-        
+        ZSREmotionButton *btn = [[ZSREmotionButton alloc] init];
         [self addSubview:btn];
+        
+        // 设置表情数据
+        btn.emotion = emotions[i];
+        
+        // 监听按钮点击
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
 }
 
@@ -51,5 +64,30 @@
         btn.y = inset + (i/ZSREmotionMaxCols) * btnH;
     }
 }
+
+/**
+ *  监听表情按钮点击
+ *
+ *  @param btn 被点击的表情按钮
+ */
+- (void)btnClick:(ZSREmotionButton *)btn
+{
+    // 给popView传递数据
+    self.popView.emotion = btn.emotion;
+    
+    // 取得最上面的window
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    [window addSubview:self.popView];
+    
+    // 计算出被点击的按钮在window中的frame
+    CGRect btnFrame = [btn convertRect:btn.bounds toView:nil];
+    self.popView.y = CGRectGetMidY(btnFrame) - self.popView.height;
+    self.popView.centerX = CGRectGetMidX(btnFrame);
+    //等会popView会消失掉
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.popView removeFromSuperview];
+    });
+}
+
 @end
 
