@@ -28,6 +28,7 @@
 		E61B48601C17164F0077EBE7 /* ZSRLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B485F1C17164F0077EBE7 /* ZSRLoadMoreFooter.m */; };
 		E61B48621C1716620077EBE7 /* ZSRLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */; };
 		E625BF831C1DAF7B00B55868 /* ZSREmotionTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E625BF821C1DAF7B00B55868 /* ZSREmotionTabBarButton.m */; };
+		E63173AC1C203B8100F936D6 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173AB1C203B8100F936D6 /* NSString+Extension.m */; };
 		E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */; };
 		E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */; };
 		E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = E64094671C1F021D00DC1169 /* ZSREmotion.m */; };
@@ -161,6 +162,8 @@
 		E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRLoadMoreFooter.xib; sourceTree = "<group>"; };
 		E625BF811C1DAF7B00B55868 /* ZSREmotionTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionTabBarButton.h; sourceTree = "<group>"; };
 		E625BF821C1DAF7B00B55868 /* ZSREmotionTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTabBarButton.m; sourceTree = "<group>"; };
+		E63173AA1C203B8100F936D6 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		E63173AB1C203B8100F936D6 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		E63F3E3A1C1860AB000DF621 /* ZSRStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusCell.h; sourceTree = "<group>"; };
 		E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusCell.m; sourceTree = "<group>"; };
 		E63F3E3D1C18614A000DF621 /* ZSRStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusFrame.h; sourceTree = "<group>"; };
@@ -497,6 +500,8 @@
 				E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */,
 				E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */,
 				E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */,
+				E63173AA1C203B8100F936D6 /* NSString+Extension.h */,
+				E63173AB1C203B8100F936D6 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1040,6 +1045,7 @@
 				E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */,
 				E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */,
 				E6CBB0331C15D925009D5F1B /* UIImageView+HighlightedWebCache.m in Sources */,
+				E63173AC1C203B8100F936D6 /* NSString+Extension.m in Sources */,
 				E61B48561C16F6CB0077EBE7 /* MJPropertyType.m in Sources */,
 				E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */,
 				E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */,

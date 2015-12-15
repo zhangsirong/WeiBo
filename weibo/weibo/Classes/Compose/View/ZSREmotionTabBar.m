@@ -80,6 +80,13 @@
     }
 }
 
+- (void)setDelegate:(id<ZSREmotionTabBarDelegate>)delegate
+{
+    _delegate = delegate;
+    
+    // 选中“默认”按钮
+    [self btnClick:(ZSREmotionTabBarButton *)[self viewWithTag:ZSREmotionTabBarButtonTypeDefault]];
+}
 /**
  *  按钮点击
  */

@@ -31,7 +31,6 @@
 {
     if (!_recentListView) {
         self.recentListView = [[ZSREmotionListView alloc] init];
-        self.recentListView.backgroundColor = ZSRRandomColor;
     }
     return _recentListView;
 }
@@ -42,7 +41,6 @@
         self.defaultListView = [[ZSREmotionListView alloc] init];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/default/info.plist" ofType:nil];
         self.defaultListView.emotions = [ZSREmotion mj_objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
-        self.defaultListView.backgroundColor = ZSRRandomColor;
     }
     return _defaultListView;
 }
@@ -53,7 +51,6 @@
         self.emojiListView = [[ZSREmotionListView alloc] init];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/emoji/info.plist" ofType:nil];
         self.emojiListView.emotions = [ZSREmotion mj_objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
-        self.emojiListView.backgroundColor = ZSRRandomColor;
     }
     return _emojiListView;
 }
@@ -64,7 +61,6 @@
         self.lxhListView = [[ZSREmotionListView alloc] init];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/lxh/info.plist" ofType:nil];
         self.lxhListView.emotions = [ZSREmotion mj_objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
-        self.lxhListView.backgroundColor = ZSRRandomColor;
     }
     return _lxhListView;
 }

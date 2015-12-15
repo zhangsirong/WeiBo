@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZSREmotionListView : UIView
-/** 表情(里面存放的HWEmotion模型) */
+/** 表情(里面存放的ZSREmotion模型) */
 @property (nonatomic, strong) NSArray *emotions;
 
 @end
