@@ -29,6 +29,9 @@
 		E61B48621C1716620077EBE7 /* ZSRLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61B48611C1716620077EBE7 /* ZSRLoadMoreFooter.xib */; };
 		E625BF831C1DAF7B00B55868 /* ZSREmotionTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E625BF821C1DAF7B00B55868 /* ZSREmotionTabBarButton.m */; };
 		E63173AC1C203B8100F936D6 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173AB1C203B8100F936D6 /* NSString+Extension.m */; };
+		E63173AF1C203CAC00F936D6 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173AE1C203CAC00F936D6 /* NSString+Emoji.m */; };
+		E63173B21C203D5700F936D6 /* ZSREmotionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173B11C203D5700F936D6 /* ZSREmotionPageView.m */; };
+		E63173B51C20569E00F936D6 /* ZSREmotionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173B41C20569E00F936D6 /* ZSREmotionButton.m */; };
 		E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */; };
 		E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */; };
 		E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = E64094671C1F021D00DC1169 /* ZSREmotion.m */; };
@@ -164,6 +167,12 @@
 		E625BF821C1DAF7B00B55868 /* ZSREmotionTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTabBarButton.m; sourceTree = "<group>"; };
 		E63173AA1C203B8100F936D6 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		E63173AB1C203B8100F936D6 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		E63173AD1C203CAC00F936D6 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		E63173AE1C203CAC00F936D6 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		E63173B01C203D5700F936D6 /* ZSREmotionPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionPageView.h; sourceTree = "<group>"; };
+		E63173B11C203D5700F936D6 /* ZSREmotionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionPageView.m; sourceTree = "<group>"; };
+		E63173B31C20569E00F936D6 /* ZSREmotionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionButton.h; sourceTree = "<group>"; };
+		E63173B41C20569E00F936D6 /* ZSREmotionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionButton.m; sourceTree = "<group>"; };
 		E63F3E3A1C1860AB000DF621 /* ZSRStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusCell.h; sourceTree = "<group>"; };
 		E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusCell.m; sourceTree = "<group>"; };
 		E63F3E3D1C18614A000DF621 /* ZSRStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusFrame.h; sourceTree = "<group>"; };
@@ -502,6 +511,8 @@
 				E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */,
 				E63173AA1C203B8100F936D6 /* NSString+Extension.h */,
 				E63173AB1C203B8100F936D6 /* NSString+Extension.m */,
+				E63173AD1C203CAC00F936D6 /* NSString+Emoji.h */,
+				E63173AE1C203CAC00F936D6 /* NSString+Emoji.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -802,6 +813,10 @@
 				E61169A61C1DA711002A457D /* ZSREmotionTabBar.m */,
 				E625BF811C1DAF7B00B55868 /* ZSREmotionTabBarButton.h */,
 				E625BF821C1DAF7B00B55868 /* ZSREmotionTabBarButton.m */,
+				E63173B01C203D5700F936D6 /* ZSREmotionPageView.h */,
+				E63173B11C203D5700F936D6 /* ZSREmotionPageView.m */,
+				E63173B31C20569E00F936D6 /* ZSREmotionButton.h */,
+				E63173B41C20569E00F936D6 /* ZSREmotionButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1012,6 +1027,7 @@
 				E64AC4AD1C0996F8007C6713 /* UIView+Extension.m in Sources */,
 				E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */,
 				E6CBB0291C15D925009D5F1B /* SDWebImageCompat.m in Sources */,
+				E63173B21C203D5700F936D6 /* ZSREmotionPageView.m in Sources */,
 				E64AC4AB1C0996F8007C6713 /* ZSRDiscoverViewController.m in Sources */,
 				E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */,
 				E6629BCF1C12C82C008E1A61 /* AFURLConnectionOperation.m in Sources */,
@@ -1022,6 +1038,7 @@
 				E6CBB02D1C15D925009D5F1B /* SDWebImageManager.m in Sources */,
 				E61B48521C16F6CB0077EBE7 /* MJExtensionConst.m in Sources */,
 				E61B48551C16F6CB0077EBE7 /* MJPropertyKey.m in Sources */,
+				E63173B51C20569E00F936D6 /* ZSREmotionButton.m in Sources */,
 				E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */,
 				E6629BD51C12C82C008E1A61 /* MBProgressHUD.m in Sources */,
 				E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */,
@@ -1034,6 +1051,7 @@
 				E6B6C3AD1C1089EC003B7903 /* ZSRTabBar.m in Sources */,
 				E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */,
 				E6CBB0321C15D925009D5F1B /* UIImage+WebP.m in Sources */,
+				E63173AF1C203CAC00F936D6 /* NSString+Emoji.m in Sources */,
 				E64AC4B41C0996F8007C6713 /* ZSRTest1ViewController.m in Sources */,
 				E61B48581C16F6CB0077EBE7 /* NSObject+MJCoding.m in Sources */,
 				E6CBB02C1C15D925009D5F1B /* SDWebImageDownloaderOperation.m in Sources */,

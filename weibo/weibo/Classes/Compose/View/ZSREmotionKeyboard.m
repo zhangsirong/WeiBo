@@ -102,23 +102,18 @@
     switch (buttonType) {
         case ZSREmotionTabBarButtonTypeRecent: // 最近
             [self addSubview:self.recentListView];
-            
-            ZSRLog(@"最近");
             break;
             
         case ZSREmotionTabBarButtonTypeDefault: // 默认
             [self addSubview:self.defaultListView];
-            ZSRLog(@"默认");
             break;
             
         case ZSREmotionTabBarButtonTypeEmoji: // Emoji
             [self addSubview:self.emojiListView];
-            ZSRLog(@"Emoji");
             break;
             
         case ZSREmotionTabBarButtonTypeLxh: // Lxh
             [self addSubview:self.lxhListView];
-            ZSRLog(@"Lxh");
             break;
     }
     // 设置正在显示的listView
