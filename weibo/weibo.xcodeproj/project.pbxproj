@@ -74,6 +74,7 @@
 		E66805A61C1C751D00B79C57 /* ZSRComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E66805A51C1C751D00B79C57 /* ZSRComposeToolbar.m */; };
 		E66CF9B01C1D13D600ABBAC3 /* ZSRComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = E66CF9AF1C1D13D600ABBAC3 /* ZSRComposePhotosView.m */; };
 		E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E66FD8C31C19AE350095E461 /* ZSRPhoto.m */; };
+		E682094F1C21BAE0006E5952 /* ZSREmotionAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = E682094E1C21BAE0006E5952 /* ZSREmotionAttachment.m */; };
 		E6836A6F1C11C45100BFD103 /* ZSRNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */; };
 		E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A01C105906003B7903 /* ZSRSearchBar.m */; };
 		E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A31C106DDF003B7903 /* ZSRDropdownMenu.m */; };
@@ -256,6 +257,8 @@
 		E66CF9AF1C1D13D600ABBAC3 /* ZSRComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRComposePhotosView.m; sourceTree = "<group>"; };
 		E66FD8C21C19AE350095E461 /* ZSRPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRPhoto.h; sourceTree = "<group>"; };
 		E66FD8C31C19AE350095E461 /* ZSRPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRPhoto.m; sourceTree = "<group>"; };
+		E682094D1C21BAE0006E5952 /* ZSREmotionAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionAttachment.h; sourceTree = "<group>"; };
+		E682094E1C21BAE0006E5952 /* ZSREmotionAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionAttachment.m; sourceTree = "<group>"; };
 		E6836A6D1C11C45100BFD103 /* ZSRNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRNewfeatureViewController.h; sourceTree = "<group>"; };
 		E6836A6E1C11C45100BFD103 /* ZSRNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRNewfeatureViewController.m; sourceTree = "<group>"; };
 		E6B6C39F1C105906003B7903 /* ZSRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRSearchBar.h; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 			children = (
 				E64094661C1F021D00DC1169 /* ZSREmotion.h */,
 				E64094671C1F021D00DC1169 /* ZSREmotion.m */,
+				E682094D1C21BAE0006E5952 /* ZSREmotionAttachment.h */,
+				E682094E1C21BAE0006E5952 /* ZSREmotionAttachment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1116,6 +1121,7 @@
 				E61169A71C1DA711002A457D /* ZSREmotionTabBar.m in Sources */,
 				E63173B81C2058D000F936D6 /* ZSREmotionPopView.m in Sources */,
 				E6CBB0301C15D925009D5F1B /* UIImage+GIF.m in Sources */,
+				E682094F1C21BAE0006E5952 /* ZSREmotionAttachment.m in Sources */,
 				E64AC4BC1C099AC8007C6713 /* UIBarButtonItem+Extension.m in Sources */,
 				E6CBB0281C15D925009D5F1B /* SDImageCache.m in Sources */,
 				E61169A41C1DA6F0002A457D /* ZSREmotionKeyboard.m in Sources */,

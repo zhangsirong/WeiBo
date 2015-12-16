@@ -10,4 +10,5 @@
 @class ZSREmotion;
 @interface ZSREmotionTextView : ZSRTextView
 - (void)insertEmotion:(ZSREmotion *)emotion;
+- (NSString *)fullText;
 @end
