@@ -34,6 +34,8 @@
 		E63173B51C20569E00F936D6 /* ZSREmotionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173B41C20569E00F936D6 /* ZSREmotionButton.m */; };
 		E63173B81C2058D000F936D6 /* ZSREmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173B71C2058D000F936D6 /* ZSREmotionPopView.m */; };
 		E63173BA1C2058EB00F936D6 /* ZSREmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63173B91C2058EB00F936D6 /* ZSREmotionPopView.xib */; };
+		E63173BD1C2067BA00F936D6 /* ZSREmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173BC1C2067BA00F936D6 /* ZSREmotionTextView.m */; };
+		E63173C01C20684A00F936D6 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E63173BF1C20684A00F936D6 /* UITextView+Extension.m */; };
 		E63F3E3C1C1860AB000DF621 /* ZSRStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */; };
 		E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */; };
 		E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = E64094671C1F021D00DC1169 /* ZSREmotion.m */; };
@@ -178,6 +180,10 @@
 		E63173B61C2058D000F936D6 /* ZSREmotionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionPopView.h; sourceTree = "<group>"; };
 		E63173B71C2058D000F936D6 /* ZSREmotionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionPopView.m; sourceTree = "<group>"; };
 		E63173B91C2058EB00F936D6 /* ZSREmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSREmotionPopView.xib; sourceTree = "<group>"; };
+		E63173BB1C2067BA00F936D6 /* ZSREmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionTextView.h; sourceTree = "<group>"; };
+		E63173BC1C2067BA00F936D6 /* ZSREmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTextView.m; sourceTree = "<group>"; };
+		E63173BE1C20684A00F936D6 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
+		E63173BF1C20684A00F936D6 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
 		E63F3E3A1C1860AB000DF621 /* ZSRStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusCell.h; sourceTree = "<group>"; };
 		E63F3E3B1C1860AB000DF621 /* ZSRStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusCell.m; sourceTree = "<group>"; };
 		E63F3E3D1C18614A000DF621 /* ZSRStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusFrame.h; sourceTree = "<group>"; };
@@ -518,6 +524,8 @@
 				E63173AB1C203B8100F936D6 /* NSString+Extension.m */,
 				E63173AD1C203CAC00F936D6 /* NSString+Emoji.h */,
 				E63173AE1C203CAC00F936D6 /* NSString+Emoji.m */,
+				E63173BE1C20684A00F936D6 /* UITextView+Extension.h */,
+				E63173BF1C20684A00F936D6 /* UITextView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -825,6 +833,8 @@
 				E63173B61C2058D000F936D6 /* ZSREmotionPopView.h */,
 				E63173B71C2058D000F936D6 /* ZSREmotionPopView.m */,
 				E63173B91C2058EB00F936D6 /* ZSREmotionPopView.xib */,
+				E63173BB1C2067BA00F936D6 /* ZSREmotionTextView.h */,
+				E63173BC1C2067BA00F936D6 /* ZSREmotionTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1053,6 +1063,7 @@
 				E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */,
 				E61B48531C16F6CB0077EBE7 /* MJFoundation.m in Sources */,
 				E6CBB02A1C15D925009D5F1B /* SDWebImageDecoder.m in Sources */,
+				E63173BD1C2067BA00F936D6 /* ZSREmotionTextView.m in Sources */,
 				E66805A61C1C751D00B79C57 /* ZSRComposeToolbar.m in Sources */,
 				E6629BCC1C12C82C008E1A61 /* AFHTTPSessionManager.m in Sources */,
 				E61B48601C17164F0077EBE7 /* ZSRLoadMoreFooter.m in Sources */,
@@ -1067,6 +1078,7 @@
 				E64AC4AC1C0996F8007C6713 /* ZSRHomeViewController.m in Sources */,
 				E6CBB0261C15D925009D5F1B /* MKAnnotationView+WebCache.m in Sources */,
 				E64AC4AF1C0996F8007C6713 /* ZSRTabBarViewController.m in Sources */,
+				E63173C01C20684A00F936D6 /* UITextView+Extension.m in Sources */,
 				E6EECDB31C1AECEC004F6FB6 /* ZSRStatusPhotosView.m in Sources */,
 				E6629BCB1C12C82C008E1A61 /* AFHTTPRequestOperationManager.m in Sources */,
 				E66FD8C41C19AE350095E461 /* ZSRPhoto.m in Sources */,

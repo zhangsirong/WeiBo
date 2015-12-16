@@ -14,11 +14,25 @@
 @interface ZSREmotionPageView ()
 /** 点击表情后弹出的放大镜 */
 @property (nonatomic, strong) ZSREmotionPopView *popView;
+/** 删除按钮 */
+@property (nonatomic, weak) UIButton *deleteButton;
 @end
 
 
 @implementation ZSREmotionPageView
-
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        UIButton *deleteButton = [[UIButton alloc] init];
+        [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete_highlighted"] forState:UIControlStateHighlighted];
+        [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete"] forState:UIControlStateNormal];
+        [deleteButton addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:deleteButton];
+        self.deleteButton = deleteButton;
+    }
+    return self;
+}
 - (ZSREmotionPopView *)popView
 {
     if (!_popView) {
@@ -57,12 +71,25 @@
     CGFloat btnW = (self.width - 2 * inset) / ZSREmotionMaxCols;
     CGFloat btnH = (self.height - inset) / ZSREmotionMaxRows;
     for (int i = 0; i<count; i++) {
-        UIButton *btn = self.subviews[i];
+        UIButton *btn = self.subviews[i + 1];
         btn.width = btnW;
         btn.height = btnH;
         btn.x = inset + (i%ZSREmotionMaxCols) * btnW;
         btn.y = inset + (i/ZSREmotionMaxCols) * btnH;
     }
+    // 删除按钮
+    self.deleteButton.width = btnW;
+    self.deleteButton.height = btnH;
+    self.deleteButton.y = self.height - btnH;
+    self.deleteButton.x = self.width - inset - btnW;
+}
+
+/**
+ *  监听删除按钮点击
+ */
+- (void)deleteClick
+{
+    ZSRLog(@"deleteClick");
 }
 
 /**
@@ -87,7 +114,10 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.popView removeFromSuperview];
     });
+    // 发出通知
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+    userInfo[ZSRSelectEmotionKey] = btn.emotion;
+    [ZSRNotificationCenter postNotificationName:ZSREmotionDidSelectNotification object:nil userInfo:userInfo];
 }
-
 @end
 

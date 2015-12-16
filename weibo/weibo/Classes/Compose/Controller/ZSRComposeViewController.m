@@ -14,10 +14,12 @@
 #import "ZSRComposeToolbar.h"
 #import "ZSRComposePhotosView.h"
 #import "ZSREmotionKeyboard.h"
+#import "ZSREmotion.h"
+#import "ZSREmotionTextView.h"
 
 @interface ZSRComposeViewController ()<UITextViewDelegate, ZSRComposeToolbarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /** 输入控件 */
-@property (nonatomic, weak) ZSRTextView *textView;
+@property (nonatomic, weak) ZSREmotionTextView *textView;
 /** 键盘顶部的工具条 */
 @property (nonatomic, weak) ZSRComposeToolbar *toolbar;
 /** 相册（存放拍照或者相册中选择的图片） */
@@ -174,11 +176,11 @@
 - (void)setupTextView
 {
     // 在这个控制器中，textView的contentInset.top默认会等于64
-    ZSRTextView *textView = [[ZSRTextView alloc] init];
+    ZSREmotionTextView *textView = [[ZSREmotionTextView alloc] init];
     textView.delegate = self;
     textView.alwaysBounceVertical = YES;
     textView.frame = self.view.bounds;
-    textView.font = [UIFont systemFontOfSize:15];
+    textView.font = [UIFont systemFontOfSize:18];
     textView.placeholder = @"分享新鲜事...";
     //    textView.placeholderColor = [UIColor redColor];
     [self.view addSubview:textView];
@@ -186,37 +188,30 @@
     
     // 文字改变的通知
     [ZSRNotificationCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:textView];
+    
     // 键盘通知
-    // 键盘的frame发生改变时发出的通知（位置和尺寸）
-    //    UIKeyboardWillChangeFrameNotification
-    //    UIKeyboardDidChangeFrameNotification
-    // 键盘显示时发出的通知
-    //    UIKeyboardWillShowNotification
-    //    UIKeyboardDidShowNotification
-    // 键盘隐藏时发出的通知
-    //    UIKeyboardWillHideNotification
-    //    UIKeyboardDidHideNotification
     [ZSRNotificationCenter addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    // 表情选中的通知
+    [ZSRNotificationCenter addObserver:self selector:@selector(emotionDidSelect:) name:ZSREmotionDidSelectNotification object:nil];
 
 }
 #pragma mark - 监听方法
+/**
+ *  表情被选中了
+ */
+- (void)emotionDidSelect:(NSNotification *)notification
+{
+    ZSREmotion *emotion = notification.userInfo[ZSRSelectEmotionKey];
+    [self.textView insertEmotion:emotion];
+}
+
 /**
  * 键盘的frame发生改变时调用（显示、隐藏等）
  */
 - (void)keyboardWillChangeFrame:(NSNotification *)notification
 {
-    //    if (self.picking) return;
-    /**
-     notification.userInfo = @{
-     // 键盘弹出\隐藏后的frame
-     UIKeyboardFrameEndUserInfoKey = NSRect: {{0, 352}, {320, 216}},
-     // 键盘弹出\隐藏所耗费的时间
-     UIKeyboardAnimationDurationUserInfoKey = 0.25,
-     // 键盘弹出\隐藏动画的执行节奏（先快后慢，匀速）
-     UIKeyboardAnimationCurveUserInfoKey = 7
-     }
-     */
-//    ZSRLog(@"%@",notification);
+    //    ZSRLog(@"%@",notification);
     // 如果正在切换键盘，就不要执行后面的代码
 //    if (self.switchingKeybaord) return;
     NSDictionary *userInfo = notification.userInfo;
@@ -436,4 +431,6 @@
     //        self.picking = NO;
     //    });
 }
+
+
 @end

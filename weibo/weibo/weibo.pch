@@ -15,6 +15,7 @@
 #import "NSDate+Extension.h"
 #import "NSString+Extension.h"
 #import "NSString+Emoji.h"
+#import "UITextView+Extension.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
@@ -28,6 +29,10 @@
 
 // 通知中心
 #define ZSRNotificationCenter [NSNotificationCenter defaultCenter]
+
+// 表情选中的通知
+#define ZSREmotionDidSelectNotification @"ZSREmotionDidSelectNotification"
+#define ZSRSelectEmotionKey @"ZSRSelectEmotionKey"
 
 #ifdef DEBUG // 处于开发阶段
 #define ZSRLog(...) NSLog(__VA_ARGS__)
