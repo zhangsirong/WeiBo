@@ -194,9 +194,21 @@
     
     // 表情选中的通知
     [ZSRNotificationCenter addObserver:self selector:@selector(emotionDidSelect:) name:ZSREmotionDidSelectNotification object:nil];
+    
+    // 删除文字的通知
+    [ZSRNotificationCenter addObserver:self selector:@selector(emotionDidDelete:) name:ZSREmotionDidDeleteNotification object:nil];
+
 
 }
 #pragma mark - 监听方法
+/**
+ *  删除文字
+ */
+- (void)emotionDidDelete:(NSNotification *)notification
+{
+    [self.textView deleteBackward];
+}
+
 /**
  *  表情被选中了
  */
@@ -213,7 +225,7 @@
 {
     //    ZSRLog(@"%@",notification);
     // 如果正在切换键盘，就不要执行后面的代码
-//    if (self.switchingKeybaord) return;
+    if (self.switchingKeybaord) return;
     NSDictionary *userInfo = notification.userInfo;
     // 动画的持续时间
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -310,6 +322,7 @@
  */
 - (void)textDidChange
 {
+
     self.navigationItem.rightBarButtonItem.enabled = self.textView.hasText;
 }
 
@@ -373,12 +386,13 @@
     //    [self.view.window endEditing:YES];
     //    [self.textView resignFirstResponder];
     
+        // 结束切换键盘
+    self.switchingKeybaord = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 弹出键盘
         [self.textView becomeFirstResponder];
         
-        // 结束切换键盘
-        self.switchingKeybaord = NO;
+
     });
 }
 - (void)openCamera

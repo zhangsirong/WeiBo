@@ -89,7 +89,8 @@
  */
 - (void)deleteClick
 {
-    ZSRLog(@"deleteClick");
+    //发出删除文字通知
+    [ZSRNotificationCenter postNotificationName:ZSREmotionDidDeleteNotification object:nil];
 }
 
 /**

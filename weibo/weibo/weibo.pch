@@ -34,6 +34,9 @@
 #define ZSREmotionDidSelectNotification @"ZSREmotionDidSelectNotification"
 #define ZSRSelectEmotionKey @"ZSRSelectEmotionKey"
 
+// 表情选中的通知
+#define ZSREmotionDidDeleteNotification @"ZSREmotionDidDeleteNotification"
+
 #ifdef DEBUG // 处于开发阶段
 #define ZSRLog(...) NSLog(__VA_ARGS__)
 #else // 处于发布阶段

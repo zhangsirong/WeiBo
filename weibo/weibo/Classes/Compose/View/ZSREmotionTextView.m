@@ -35,7 +35,10 @@
         NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attch];
         
         // 插入属性文字到光标位置
-        [self insertAttributeText:imageStr];        
+        [self insertAttributedText:imageStr settingBlock:^(NSMutableAttributedString *attributedText) {
+            // 设置字体
+            [attributedText addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, attributedText.length)];
+        }];
         
     }
 }
