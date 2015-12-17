@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E608505F1C22D4A2007CBA18 /* ZSREmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */; };
 		E60850611C22F389007CBA18 /* ZSRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E60850601C22F389007CBA18 /* ZSRConst.m */; };
+		E60850661C230247007CBA18 /* ZSRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E60850651C230247007CBA18 /* ZSRHttpTool.m */; };
 		E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */; };
 		E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */; };
 		E61169A11C1DA6D5002A457D /* ZSREmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61169A01C1DA6D5002A457D /* ZSREmotionListView.m */; };
@@ -134,6 +135,8 @@
 		E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTool.m; sourceTree = "<group>"; };
 		E60850601C22F389007CBA18 /* ZSRConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRConst.m; sourceTree = "<group>"; };
 		E60850621C22F39D007CBA18 /* ZSRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSRConst.h; sourceTree = "<group>"; };
+		E60850641C230247007CBA18 /* ZSRHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRHttpTool.h; sourceTree = "<group>"; };
+		E60850651C230247007CBA18 /* ZSRHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRHttpTool.m; sourceTree = "<group>"; };
 		E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusToolbar.h; sourceTree = "<group>"; };
 		E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusToolbar.m; sourceTree = "<group>"; };
 		E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
@@ -369,6 +372,15 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		E60850631C23022A007CBA18 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E60850641C230247007CBA18 /* ZSRHttpTool.h */,
+				E60850651C230247007CBA18 /* ZSRHttpTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		E61B48391C16F6CB0077EBE7 /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +530,7 @@
 		E64AC4821C0996F8007C6713 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E60850631C23022A007CBA18 /* Tool */,
 				E6629BAF1C12C82B008E1A61 /* Lib */,
 				E6B6C39E1C1058F2003B7903 /* View */,
 				E64AC4831C0996F8007C6713 /* Category */,
@@ -1108,6 +1121,7 @@
 				E64094681C1F021D00DC1169 /* ZSREmotion.m in Sources */,
 				E6CBB0331C15D925009D5F1B /* UIImageView+HighlightedWebCache.m in Sources */,
 				E63173AC1C203B8100F936D6 /* NSString+Extension.m in Sources */,
+				E60850661C230247007CBA18 /* ZSRHttpTool.m in Sources */,
 				E61B48561C16F6CB0077EBE7 /* MJPropertyType.m in Sources */,
 				E6EECDB61C1AED26004F6FB6 /* ZSRStatusPhotoView.m in Sources */,
 				E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */,

@@ -8,7 +8,7 @@
 
 
 #import "ZSROAuthViewController.h"
-#import "AFNetworking.h"
+#import "ZSRHttpTool.h"
 #import "MBProgressHUD+MJ.h"
 #import "ZSRAccountTool.h"
 
@@ -87,24 +87,7 @@
  *  @param code 授权成功后的request token
  */
 - (void)accessTokenWithCode:(NSString *)code
-{
-    /*
-     URL：https://api.weibo.com/oauth2/access_token
-     
-     请求参数：
-     client_id：申请应用时分配的AppKey
-     client_secret：申请应用时分配的AppSecret
-     grant_type：使用authorization_code
-     redirect_uri：授权成功后的回调地址
-     code：授权成功后返回的code
-     */
-    // 1.请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    // AFN的AFJSONResponseSerializer默认不接受text/plain这种类型
-    
-    // 2.拼接请求参数
+{    // 1.拼接请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"client_id"] = ZSRAppKey;
     params[@"client_secret"] = ZSRAppSecret;//  ceea8a46ccf52021258cae04e97760d3
@@ -112,22 +95,20 @@
     params[@"redirect_uri"] = ZSRRedirectURI;
     params[@"code"] = code;
     
-    // 3.发送请求
-    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    // 2.发送请求
+    [ZSRHttpTool post:@"https://api.weibo.com/oauth2/access_token" params:params success:^(id json) {
         [MBProgressHUD hideHUD];
         
-         // 将返回的账号字典数据 --> 模型，存进沙盒
-        ZSRAccount *account = [ZSRAccount accountWithDict:responseObject];
+        // 将返回的账号字典数据 --> 模型，存进沙盒
+        ZSRAccount *account = [ZSRAccount accountWithDict:json];
         //存储账号
         [ZSRAccountTool saveAccount:account];
         // 切换窗口的根控制器
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         [window switchRootViewController];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSError *error) {
         [MBProgressHUD hideHUD];
         ZSRLog(@"请求失败-%@",error);
-
     }];
 }
 @end
