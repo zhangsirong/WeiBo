@@ -32,7 +32,8 @@
      client_id	true	string	申请应用时分配的AppKey。
      redirect_uri	true	string	授权回调地址，站外应用需与设置的回调地址一致，站内应用需填写canvas page的地址。
      */
-    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/oauth2/authorize?client_id=3615446451&redirect_uri=https://www.baidu.com"];
+    NSString *urlStr = [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@", ZSRAppKey, ZSRRedirectURI];
+    NSURL *url = [NSURL URLWithString:urlStr];
 //    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -105,10 +106,10 @@
     
     // 2.拼接请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"client_id"] = @"3615446451";
-    params[@"client_secret"] = @"6178adec639fa41e735db5568c3d3fad";//  ceea8a46ccf52021258cae04e97760d3
+    params[@"client_id"] = ZSRAppKey;
+    params[@"client_secret"] = ZSRAppSecret;//  ceea8a46ccf52021258cae04e97760d3
     params[@"grant_type"] = @"authorization_code";
-    params[@"redirect_uri"] = @"https://www.baidu.com";
+    params[@"redirect_uri"] = ZSRRedirectURI;
     params[@"code"] = code;
     
     // 3.发送请求

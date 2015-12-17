@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E608505F1C22D4A2007CBA18 /* ZSREmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */; };
+		E60850611C22F389007CBA18 /* ZSRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E60850601C22F389007CBA18 /* ZSRConst.m */; };
 		E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */; };
 		E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */; };
 		E61169A11C1DA6D5002A457D /* ZSREmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61169A01C1DA6D5002A457D /* ZSREmotionListView.m */; };
@@ -131,6 +132,8 @@
 /* Begin PBXFileReference section */
 		E608505D1C22D4A2007CBA18 /* ZSREmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionTool.h; sourceTree = "<group>"; };
 		E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTool.m; sourceTree = "<group>"; };
+		E60850601C22F389007CBA18 /* ZSRConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRConst.m; sourceTree = "<group>"; };
+		E60850621C22F39D007CBA18 /* ZSRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSRConst.h; sourceTree = "<group>"; };
 		E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusToolbar.h; sourceTree = "<group>"; };
 		E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusToolbar.m; sourceTree = "<group>"; };
 		E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
@@ -571,6 +574,8 @@
 				E64AC48E1C0996F8007C6713 /* AppDelegate.h */,
 				E64AC48F1C0996F8007C6713 /* AppDelegate.m */,
 				E64AC4901C0996F8007C6713 /* main.m */,
+				E60850601C22F389007CBA18 /* ZSRConst.m */,
+				E60850621C22F39D007CBA18 /* ZSRConst.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1119,6 +1124,7 @@
 				E63F3E3F1C18614A000DF621 /* ZSRStatusFrame.m in Sources */,
 				E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */,
 				E61B48591C16F6CB0077EBE7 /* NSObject+MJKeyValue.m in Sources */,
+				E60850611C22F389007CBA18 /* ZSRConst.m in Sources */,
 				E61B48511C16F6CB0077EBE7 /* MJDictionaryCache.m in Sources */,
 				E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */,
 				E6CBB0351C15D925009D5F1B /* UIView+WebCacheOperation.m in Sources */,
