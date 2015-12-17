@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZSREmotion;
+@class ZSREmotion,ZSREmotionButton;
 @interface ZSREmotionPopView : UIView
 + (instancetype)popView;
-
-@property (nonatomic, strong) ZSREmotion *emotion;
+- (void)showFrom:(ZSREmotionButton *)button;
 @end
