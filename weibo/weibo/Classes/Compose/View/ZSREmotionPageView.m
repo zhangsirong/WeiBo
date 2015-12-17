@@ -10,6 +10,7 @@
 #import "ZSREmotion.h"
 #import "ZSREmotionPopView.h"
 #import "ZSREmotionButton.h"
+#import "ZSREmotionTool.h"
 
 @interface ZSREmotionPageView ()
 /** 点击表情后弹出的放大镜 */
@@ -73,9 +74,8 @@
             // 如果手指还在表情按钮上
             if (btn) {
                 // 发出通知
-                NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-                userInfo[ZSRSelectEmotionKey] = btn.emotion;
-                [ZSRNotificationCenter postNotificationName:ZSREmotionDidSelectNotification object:nil userInfo:userInfo];
+                [self selectEmotion:btn.emotion];
+
             }
             break;
             
@@ -164,8 +164,22 @@
         [self.popView removeFromSuperview];
     });
     // 发出通知
+    [self selectEmotion:btn.emotion];
+}
+
+/**
+ *  选中某个表情，发出通知
+ *
+ *  @param emotion 被选中的表情
+ */
+- (void)selectEmotion:(ZSREmotion *)emotion
+{
+    // 将这个表情存进沙盒
+    [ZSREmotionTool addRecentEmotion:emotion];
+    
+    // 发出通知
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-    userInfo[ZSRSelectEmotionKey] = btn.emotion;
+    userInfo[ZSRSelectEmotionKey] = emotion;
     [ZSRNotificationCenter postNotificationName:ZSREmotionDidSelectNotification object:nil userInfo:userInfo];
 }
 @end

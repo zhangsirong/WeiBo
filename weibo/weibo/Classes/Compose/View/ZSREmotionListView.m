@@ -35,6 +35,7 @@
         
         // 2.pageControl
         UIPageControl *pageControl = [[UIPageControl alloc] init];
+        pageControl.hidesForSinglePage = YES;
         pageControl.userInteractionEnabled = NO;
         // 设置内部的圆点图片
         [pageControl setValue:[UIImage imageNamed:@"compose_keyboard_dot_normal"] forKeyPath:@"pageImage"];
@@ -49,6 +50,8 @@
 - (void)setEmotions:(NSArray *)emotions
 {
     _emotions = emotions;
+    // 删除之前的控件
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     NSUInteger count = (emotions.count + ZSREmotionPageSize - 1) / ZSREmotionPageSize;
     
@@ -72,6 +75,7 @@
         pageView.emotions = [emotions subarrayWithRange:range];
         [self.scrollView addSubview:pageView];
     }
+    [self setNeedsLayout];
     
     // 1页20个
     // 总共55个

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E608505F1C22D4A2007CBA18 /* ZSREmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */; };
 		E60AB0FB1C19D0F300041364 /* ZSRStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */; };
 		E60AB0FE1C19DBAF00041364 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E60AB0FD1C19DBAF00041364 /* NSDate+Extension.m */; };
 		E61169A11C1DA6D5002A457D /* ZSREmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61169A01C1DA6D5002A457D /* ZSREmotionListView.m */; };
@@ -128,6 +129,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E608505D1C22D4A2007CBA18 /* ZSREmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSREmotionTool.h; sourceTree = "<group>"; };
+		E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSREmotionTool.m; sourceTree = "<group>"; };
 		E60AB0F91C19D0F300041364 /* ZSRStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusToolbar.h; sourceTree = "<group>"; };
 		E60AB0FA1C19D0F300041364 /* ZSRStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusToolbar.m; sourceTree = "<group>"; };
 		E60AB0FC1C19DBAF00041364 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
@@ -354,6 +357,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E608505C1C22D437007CBA18 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E608505D1C22D4A2007CBA18 /* ZSREmotionTool.h */,
+				E608505E1C22D4A2007CBA18 /* ZSREmotionTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		E61B48391C16F6CB0077EBE7 /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +812,7 @@
 		E6EECDBA1C1B151B004F6FB6 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				E608505C1C22D437007CBA18 /* Tool */,
 				E64094651C1F01F800DC1169 /* Model */,
 				E6EECDBB1C1B151B004F6FB6 /* Controller */,
 				E6EECDBC1C1B151B004F6FB6 /* View */,
@@ -1126,6 +1139,7 @@
 				E6CBB0281C15D925009D5F1B /* SDImageCache.m in Sources */,
 				E61169A41C1DA6F0002A457D /* ZSREmotionKeyboard.m in Sources */,
 				E6EECDB91C1B080F004F6FB6 /* ZSRIconView.m in Sources */,
+				E608505F1C22D4A2007CBA18 /* ZSREmotionTool.m in Sources */,
 				E6CBB0271C15D925009D5F1B /* NSData+ImageContentType.m in Sources */,
 				E64AC4B61C0996F8007C6713 /* ZSRTest2ViewController.m in Sources */,
 				E6CBB02E1C15D925009D5F1B /* SDWebImagePrefetcher.m in Sources */,

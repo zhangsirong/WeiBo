@@ -24,7 +24,8 @@
 
     // 拼接图片
     NSUInteger loc = self.selectedRange.location;
-    [attributedText insertAttributedString:text atIndex:loc];
+//    [attributedText insertAttributedString:text atIndex:loc];
+    [attributedText replaceCharactersInRange:self.selectedRange withAttributedString:text];
     // 设置字体
     [attributedText addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, attributedText.length)];
     self.attributedText = attributedText;

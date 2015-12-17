@@ -10,6 +10,7 @@
 #import "ZSREmotionListView.h"
 #import "ZSREmotionTabBar.h"
 #import "ZSREmotion.h"
+#import "ZSREmotionTool.h"
 #import "MJExtension.h"
 
 @interface ZSREmotionKeyboard ()<ZSREmotionTabBarDelegate>
@@ -31,6 +32,8 @@
 {
     if (!_recentListView) {
         self.recentListView = [[ZSREmotionListView alloc] init];
+        // 加载沙盒中的数据
+        self.recentListView.emotions = [ZSREmotionTool recentEmotions];
     }
     return _recentListView;
 }
@@ -74,9 +77,17 @@
         tabBar.delegate = self;
         [self addSubview:tabBar];
         self.tabBar = tabBar;
+        // 表情选中的通知
+        [ZSRNotificationCenter addObserver:self selector:@selector(emotionDidSelect) name:ZSREmotionDidSelectNotification object:nil];
     }
     return self;
 }
+
+- (void)emotionDidSelect
+{
+    self.recentListView.emotions = [ZSREmotionTool recentEmotions];
+}
+
 
 - (void)layoutSubviews
 {
@@ -101,6 +112,9 @@
     [self.showingListView removeFromSuperview];
     switch (buttonType) {
         case ZSREmotionTabBarButtonTypeRecent: // 最近
+ //             加载沙盒中的数据
+//             self.recentListView.emotions = [ZSREmotionTool recentEmotions];
+            
             [self addSubview:self.recentListView];
             break;
             
