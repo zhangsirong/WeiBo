@@ -86,6 +86,8 @@
 		E6CA879F1C298BE700871DD9 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA879E1C298BE700871DD9 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E6CA87A21C298DC400871DD9 /* ZSRTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA87A11C298DC400871DD9 /* ZSRTextPart.m */; };
 		E6CA87A41C29911600871DD9 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CA87A31C29911600871DD9 /* libicucore.tbd */; };
+		E6CA87A71C29A4CF00871DD9 /* ZSRSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA87A61C29A4CF00871DD9 /* ZSRSpecial.m */; };
+		E6CA87AA1C29A6F000871DD9 /* ZSRStatusTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA87A91C29A6F000871DD9 /* ZSRStatusTextView.m */; };
 		E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */; };
 		E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */; };
 		E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */; };
@@ -286,6 +288,10 @@
 		E6CA87A01C298DC400871DD9 /* ZSRTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTextPart.h; sourceTree = "<group>"; };
 		E6CA87A11C298DC400871DD9 /* ZSRTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTextPart.m; sourceTree = "<group>"; };
 		E6CA87A31C29911600871DD9 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		E6CA87A51C29A4CF00871DD9 /* ZSRSpecial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRSpecial.h; sourceTree = "<group>"; };
+		E6CA87A61C29A4CF00871DD9 /* ZSRSpecial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRSpecial.m; sourceTree = "<group>"; };
+		E6CA87A81C29A6F000871DD9 /* ZSRStatusTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRStatusTextView.h; sourceTree = "<group>"; };
+		E6CA87A91C29A6F000871DD9 /* ZSRStatusTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRStatusTextView.m; sourceTree = "<group>"; };
 		E6CBAFF91C15A1BE009D5F1B /* ZSRAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccountTool.h; sourceTree = "<group>"; };
 		E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccountTool.m; sourceTree = "<group>"; };
 		E6CBAFFC1C15BC1A009D5F1B /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
@@ -512,6 +518,8 @@
 				E66FD8C31C19AE350095E461 /* ZSRPhoto.m */,
 				E6CA87A01C298DC400871DD9 /* ZSRTextPart.h */,
 				E6CA87A11C298DC400871DD9 /* ZSRTextPart.m */,
+				E6CA87A51C29A4CF00871DD9 /* ZSRSpecial.h */,
+				E6CA87A61C29A4CF00871DD9 /* ZSRSpecial.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -534,6 +542,8 @@
 				E6EECDB21C1AECEC004F6FB6 /* ZSRStatusPhotosView.m */,
 				E6EECDB41C1AED26004F6FB6 /* ZSRStatusPhotoView.h */,
 				E6EECDB51C1AED26004F6FB6 /* ZSRStatusPhotoView.m */,
+				E6CA87A81C29A6F000871DD9 /* ZSRStatusTextView.h */,
+				E6CA87A91C29A6F000871DD9 /* ZSRStatusTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1163,10 +1173,12 @@
 				E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */,
 				E61B48591C16F6CB0077EBE7 /* NSObject+MJKeyValue.m in Sources */,
 				E60850611C22F389007CBA18 /* ZSRConst.m in Sources */,
+				E6CA87AA1C29A6F000871DD9 /* ZSRStatusTextView.m in Sources */,
 				E61B48511C16F6CB0077EBE7 /* MJDictionaryCache.m in Sources */,
 				E61B48351C16E7B20077EBE7 /* ZSRUser.m in Sources */,
 				E6CBB0351C15D925009D5F1B /* UIView+WebCacheOperation.m in Sources */,
 				E6629BCD1C12C82C008E1A61 /* AFNetworkReachabilityManager.m in Sources */,
+				E6CA87A71C29A4CF00871DD9 /* ZSRSpecial.m in Sources */,
 				E6629BD11C12C82C008E1A61 /* AFURLResponseSerialization.m in Sources */,
 				E6EECDBF1C1B1558004F6FB6 /* ZSRComposeViewController.m in Sources */,
 				E64ABC221C148988000C733A /* ZSRAccount.m in Sources */,

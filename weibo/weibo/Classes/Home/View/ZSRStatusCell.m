@@ -14,6 +14,7 @@
 #import "ZSRStatusToolbar.h"
 #import "ZSRIconView.h"
 #import "ZSRStatusPhotosView.h"
+#import "ZSRStatusTextView.h"
 #import "UIImageView+WebCache.h"
 
 @interface ZSRStatusCell()
@@ -33,13 +34,13 @@
 /** 来源 */
 @property (nonatomic, weak) UILabel *sourceLabel;
 /** 正文 */
-@property (nonatomic, weak) UILabel *contentLabel;
+@property (nonatomic, weak)  ZSRStatusTextView *contentLabel;
 
 /* 转发微博 */
 /** 转发微博整体 */
 @property (nonatomic, weak) UIView *retweetView;
 /** 转发微博正文 + 昵称 */
-@property (nonatomic, weak) UILabel *retweetContentLabel;
+@property (nonatomic, weak) ZSRStatusTextView *retweetContentLabel;
 /** 转发配图 */
 @property (nonatomic, weak) UIImageView *retweetPhotoView;
 
@@ -137,9 +138,7 @@
     self.sourceLabel = sourceLabel;
     
     /** 正文 */
-    UILabel *contentLabel = [[UILabel alloc] init];
-    contentLabel.font = ZSRStatusCellContentFont;
-    contentLabel.numberOfLines = 0;
+    ZSRStatusTextView *contentLabel = [[ZSRStatusTextView alloc] init];
     [originalView addSubview:contentLabel];
     self.contentLabel = contentLabel;
 }
@@ -156,9 +155,7 @@
     self.retweetView = retweetView;
     
     /** 转发微博正文 + 昵称 */
-    UILabel *retweetContentLabel = [[UILabel alloc] init];
-    retweetContentLabel.numberOfLines = 0;
-    retweetContentLabel.font = ZSRStatusCellRetweetContentFont;
+    ZSRStatusTextView *retweetContentLabel = [[ZSRStatusTextView alloc] init];
     [retweetView addSubview:retweetContentLabel];
     self.retweetContentLabel = retweetContentLabel;
     

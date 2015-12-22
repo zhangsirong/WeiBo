@@ -13,7 +13,7 @@
 #import "ZSRTextPart.h"
 #import "ZSREmotion.h"
 #import "ZSREmotionTool.h"
-
+#import "ZSRSpecial.h"
 @implementation ZSRStatus
 
 /**
@@ -77,6 +77,7 @@
     }];
     
     UIFont *font = [UIFont systemFontOfSize:15];
+    NSMutableArray *specials = [NSMutableArray array];
     // 按顺序拼接每一段文字
     for (ZSRTextPart *part in parts) {
         // 等会需要拼接的子串
@@ -95,15 +96,24 @@
             substr = [[NSAttributedString alloc] initWithString:part.text attributes:@{
                                                                                        NSForegroundColorAttributeName : [UIColor redColor]
                                                                                        }];
+            // 创建特殊对象
+            ZSRSpecial *s = [[ZSRSpecial alloc] init];
+            s.text = part.text;
+            NSUInteger loc = attributedText.length;
+            NSUInteger len = part.text.length;
+            s.range = NSMakeRange(loc, len);
+            [specials addObject:s];
+
         } else { // 非特殊文字
-            substr = [[NSAttributedString alloc] initWithString:part.text];
+            substr = [[NSAttributedString alloc] initWithString:part.text ];
         }
         [attributedText appendAttributedString:substr];
     }
     
     // 一定要设置字体,保证计算出来的尺寸是正确的
     [attributedText addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attributedText.length)];
-    
+    [attributedText addAttribute:@"specials" value:specials range:NSMakeRange(0, 1)];
+
     return attributedText;
 }
 
@@ -178,9 +188,9 @@
             return [fmt stringFromDate:createDate];
         } else if ([createDate isToday]) { // 今天
             if (cmps.hour >= 1) {
-                return [NSString stringWithFormat:@"%ld小时前", cmps.hour];
+                return [NSString stringWithFormat:@"%d小时前", cmps.hour];
             } else if (cmps.minute >= 1) {
-                return [NSString stringWithFormat:@"%ld分钟前", cmps.minute];
+                return [NSString stringWithFormat:@"%d分钟前", cmps.minute];
             } else {
                 return @"刚刚";
             }
