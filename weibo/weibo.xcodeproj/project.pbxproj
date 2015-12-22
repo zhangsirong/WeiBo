@@ -83,6 +83,9 @@
 		E6B6C3A41C106DDF003B7903 /* ZSRDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A31C106DDF003B7903 /* ZSRDropdownMenu.m */; };
 		E6B6C3AA1C10754F003B7903 /* ZSRTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */; };
 		E6B6C3AD1C1089EC003B7903 /* ZSRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */; };
+		E6CA879F1C298BE700871DD9 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA879E1C298BE700871DD9 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E6CA87A21C298DC400871DD9 /* ZSRTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA87A11C298DC400871DD9 /* ZSRTextPart.m */; };
+		E6CA87A41C29911600871DD9 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CA87A31C29911600871DD9 /* libicucore.tbd */; };
 		E6CBAFFB1C15A1BE009D5F1B /* ZSRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */; };
 		E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFD1C15BC1A009D5F1B /* UIWindow+Extension.m */; };
 		E6CBB0001C15C42E009D5F1B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CBAFFF1C15C42E009D5F1B /* Foundation+Log.m */; };
@@ -278,6 +281,11 @@
 		E6B6C3A91C10754F003B7903 /* ZSRTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTitleMenuViewController.m; sourceTree = "<group>"; };
 		E6B6C3AB1C1089EC003B7903 /* ZSRTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTabBar.h; sourceTree = "<group>"; };
 		E6B6C3AC1C1089EC003B7903 /* ZSRTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTabBar.m; sourceTree = "<group>"; };
+		E6CA879D1C298BE700871DD9 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		E6CA879E1C298BE700871DD9 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		E6CA87A01C298DC400871DD9 /* ZSRTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRTextPart.h; sourceTree = "<group>"; };
+		E6CA87A11C298DC400871DD9 /* ZSRTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRTextPart.m; sourceTree = "<group>"; };
+		E6CA87A31C29911600871DD9 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		E6CBAFF91C15A1BE009D5F1B /* ZSRAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRAccountTool.h; sourceTree = "<group>"; };
 		E6CBAFFA1C15A1BE009D5F1B /* ZSRAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRAccountTool.m; sourceTree = "<group>"; };
 		E6CBAFFC1C15BC1A009D5F1B /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
@@ -343,6 +351,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6CA87A41C29911600871DD9 /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +510,8 @@
 				E63F3E3E1C18614A000DF621 /* ZSRStatusFrame.m */,
 				E66FD8C21C19AE350095E461 /* ZSRPhoto.h */,
 				E66FD8C31C19AE350095E461 /* ZSRPhoto.m */,
+				E6CA87A01C298DC400871DD9 /* ZSRTextPart.h */,
+				E6CA87A11C298DC400871DD9 /* ZSRTextPart.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -697,6 +708,7 @@
 		E6629BAF1C12C82B008E1A61 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E6CA879C1C298BE700871DD9 /* RegexKitLite */,
 				E61B48391C16F6CB0077EBE7 /* MJExtension */,
 				E6CBB0041C15D925009D5F1B /* SDWebImage */,
 				E6629BB01C12C82B008E1A61 /* AFNetworking */,
@@ -776,6 +788,15 @@
 				E66805A21C1C521900B79C57 /* ZSRTextView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E6CA879C1C298BE700871DD9 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				E6CA879D1C298BE700871DD9 /* RegexKitLite.h */,
+				E6CA879E1C298BE700871DD9 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
 		E6CBAFF81C15A1A3009D5F1B /* Tool */ = {
@@ -878,6 +899,7 @@
 		E6F4BC051C088A8400C30E47 = {
 			isa = PBXGroup;
 			children = (
+				E6CA87A31C29911600871DD9 /* libicucore.tbd */,
 				E6F4BC101C088A8500C30E47 /* weibo */,
 				E6F4BC2A1C088A8500C30E47 /* weiboTests */,
 				E6F4BC351C088A8500C30E47 /* weiboUITests */,
@@ -1094,6 +1116,7 @@
 				E61B48521C16F6CB0077EBE7 /* MJExtensionConst.m in Sources */,
 				E61B48551C16F6CB0077EBE7 /* MJPropertyKey.m in Sources */,
 				E63173B51C20569E00F936D6 /* ZSREmotionButton.m in Sources */,
+				E6CA879F1C298BE700871DD9 /* RegexKitLite.m in Sources */,
 				E6CBAFFE1C15BC1A009D5F1B /* UIWindow+Extension.m in Sources */,
 				E6629BD51C12C82C008E1A61 /* MBProgressHUD.m in Sources */,
 				E64AC4B01C0996F8007C6713 /* AppDelegate.m in Sources */,
@@ -1108,6 +1131,7 @@
 				E6B6C3A11C105906003B7903 /* ZSRSearchBar.m in Sources */,
 				E6CBB0321C15D925009D5F1B /* UIImage+WebP.m in Sources */,
 				E63173AF1C203CAC00F936D6 /* NSString+Emoji.m in Sources */,
+				E6CA87A21C298DC400871DD9 /* ZSRTextPart.m in Sources */,
 				E64AC4B41C0996F8007C6713 /* ZSRTest1ViewController.m in Sources */,
 				E61B48581C16F6CB0077EBE7 /* NSObject+MJCoding.m in Sources */,
 				E6CBB02C1C15D925009D5F1B /* SDWebImageDownloaderOperation.m in Sources */,

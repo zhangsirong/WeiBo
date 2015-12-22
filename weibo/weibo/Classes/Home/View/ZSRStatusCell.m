@@ -229,21 +229,19 @@
     self.sourceLabel.frame = statusFrame.sourceLabelF;
     
     /** 正文 */
-    self.contentLabel.text = status.text;
+    self.contentLabel.attributedText = status.attributedText;
     self.contentLabel.frame = statusFrame.contentLabelF;
     
     /** 被转发的微博 */
     if (status.retweeted_status) {
         ZSRStatus *retweeted_status = status.retweeted_status;
-        ZSRUser *retweeted_status_user = retweeted_status.user;
-        
+
         self.retweetView.hidden = NO;
         /** 被转发的微博整体 */
         self.retweetView.frame = statusFrame.retweetViewF;
         
         /** 被转发的微博正文 */
-        NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
-        self.retweetContentLabel.text = retweetContent;
+        self.retweetContentLabel.attributedText = status.retweetedAttributedText;
         self.retweetContentLabel.frame = statusFrame.retweetContentLabelF;
         
         /** 被转发的微博配图 */

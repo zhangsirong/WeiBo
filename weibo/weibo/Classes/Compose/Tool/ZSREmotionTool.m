@@ -10,7 +10,8 @@
 #define ZSRRecentEmotionsPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"emotions.archive"]
 
 #import "ZSREmotionTool.h"
-
+#import "ZSREmotion.h"
+#import "MJExtension.h"
 @implementation ZSREmotionTool
 static NSMutableArray *_recentEmotions;
 
@@ -20,6 +21,21 @@ static NSMutableArray *_recentEmotions;
     if (_recentEmotions == nil) {
         _recentEmotions = [NSMutableArray array];
     }
+}
+
++ (ZSREmotion *)emotionWithChs:(NSString *)chs
+{
+    NSArray *defaults = [self defaultEmotions];
+    for (ZSREmotion *emotion in defaults) {
+        if ([emotion.chs isEqualToString:chs]) return emotion;
+    }
+    
+    NSArray *lxhs = [self lxhEmotions];
+    for (ZSREmotion *emotion in lxhs) {
+        if ([emotion.chs isEqualToString:chs]) return emotion;
+    }
+    
+    return nil;
 }
 
 + (void)addRecentEmotion:(ZSREmotion *)emotion
@@ -63,5 +79,34 @@ static NSMutableArray *_recentEmotions;
 //            break;
 //        }
 //    }
+
+static NSArray *_emojiEmotions, *_defaultEmotions, *_lxhEmotions;
++ (NSArray *)emojiEmotions
+{
+    if (!_emojiEmotions) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/emoji/info.plist" ofType:nil];
+        _emojiEmotions = [ZSREmotion mj_objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+    }
+    return _emojiEmotions;
+}
+
++ (NSArray *)defaultEmotions
+{
+    if (!_defaultEmotions) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/default/info.plist" ofType:nil];
+        _defaultEmotions = [ZSREmotion mj_objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+    }
+    return _defaultEmotions;
+}
+
++ (NSArray *)lxhEmotions
+{
+    if (!_lxhEmotions) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/lxh/info.plist" ofType:nil];
+        _lxhEmotions = [ZSREmotion mj_objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+    }
+    return _lxhEmotions;
+}
+
 @end
 
